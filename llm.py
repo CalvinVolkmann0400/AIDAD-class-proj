@@ -9,6 +9,7 @@ To test your key from the terminal:  uv run python llm.py
 
 import concurrent.futures
 import os
+import re
 import time
 
 from dotenv import load_dotenv
@@ -113,25 +114,28 @@ def _call_with_time_limit(client, model, system, prompt, schema) -> str:
         pool.shutdown(wait=False)  # do not wait around for a stuck request
 
 
+def _error_code(error: Exception) -> int | None:
+    """The web error number (for example 503), under whichever name the SDK stores it."""
+    code = getattr(error, "status_code", None) or getattr(error, "code", None)
+    return int(code) if str(code).isdigit() else None
+
+
 def _is_temporary(error: Exception) -> bool:
     """True for "busy / overloaded / timed out" errors, which are worth retrying."""
-    if isinstance(error, TimeoutError):
+    if isinstance(error, TimeoutError) or _error_code(error) in TEMPORARY_CODES:
         return True
-    if getattr(error, "code", None) in TEMPORARY_CODES:
-        return True
-    text = str(error).lower()
-    return any(word in text for word in ("overloaded", "unavailable", "timed out", "timeout"))
+    text = (type(error).__name__ + " " + str(error)).lower()
+    return any(word in text for word in ("overloaded", "unavailable", "timed out", "timeout", "connection"))
 
 
 def _describe(error: Exception) -> str:
-    """A short description of an error that can never contain the API key."""
-    code = getattr(error, "code", "")
-    status = getattr(error, "status", "") or type(error).__name__
-    message = str(getattr(error, "message", "") or "")[:200]
+    """A short description of an error. It can never contain the API key."""
+    found = re.search(r"'message': ['\"](.*?)['\"],", str(error))  # Google's own explanation
+    detail = found.group(1) if found else type(error).__name__
     key = os.environ.get("GEMINI_API_KEY")
     if key:
-        message = message.replace(key, "[key hidden]")
-    return f"{code} {status}. {message}".strip()
+        detail = detail.replace(key, "[key hidden]")
+    return f"error {_error_code(error) or ''}: {detail}"[:200]
 
 
 def test_connection() -> str:

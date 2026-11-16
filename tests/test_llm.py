@@ -26,13 +26,11 @@ class ScriptedClient:
 
 
 class BusyError(Exception):
-    code = 503
+    status_code = 503  # "service overloaded"
 
 
 class BadKeyError(Exception):
-    code = 400
-    status = "INVALID_ARGUMENT"
-    message = "API key not valid."
+    status_code = 400  # "your request is wrong", so retrying cannot help
 
 
 def no_sleep(seconds):
