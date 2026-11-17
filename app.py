@@ -63,17 +63,20 @@ PAGES = {
 has_menu = role in ("closer", "owner")
 page = st.navigation(PAGES[role], position="sidebar" if has_menu else "hidden")
 
+ui.brand()  # the parts of the Sunsettr look that the theme file (.streamlit/config.toml) cannot express
+
 if has_menu:
     offer = storage.load_offer()
+    who = f"Closer · {offer.closer_name}" if role == "closer" else f"Owner · {offer.business_name}"
     with st.sidebar:
-        who = f"{offer.closer_name} · closer" if role == "closer" else f"{offer.business_name} · owner"
-        st.caption(f"Signed in as **{who}** (demo access, no password). All people and businesses are invented.")
+        ui.wordmark()
+        ui.demo_switch(role)  # lets the presenter jump between the three views
+        st.caption("Demo access, no password. All people and businesses are invented.")
         if llm.has_api_key():
             st.badge(f"Live AI: {llm.MODEL}", icon=":material/bolt:", color="green")
         else:
             st.badge("Practice mode (no API key)", icon=":material/science:", color="orange")
-        st.button("Switch role", key="switch_role", icon=":material/swap_horiz:", width="stretch",
-                  on_click=ui.set_role, args=(None,))
+    ui.eyebrow(who)
     st.title(page.title)
 
 page.run()

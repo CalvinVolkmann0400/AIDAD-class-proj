@@ -54,10 +54,17 @@ def test_clicks_are_counted(tmp_path):
     assert storage.count_clicks(db) == 2
 
 
-def test_next_free_slot_skips_taken_times():
+def test_free_slots_skip_taken_times_and_weekends():
     taken = [make_lead(call_time="2026-11-18 10:00"), make_lead(call_time="2026-11-18 11:30")]
-    assert storage.next_free_slot([], TODAY) == "2026-11-18 10:00"
-    assert storage.next_free_slot(taken, TODAY) == "2026-11-18 14:00"
+    slots = storage.free_slots(taken, TODAY)  # TODAY is Tuesday 17 November 2026
+    assert slots["2026-11-18"] == ["14:00", "15:30"]
+    assert list(slots) == ["2026-11-18", "2026-11-19", "2026-11-20", "2026-11-23", "2026-11-24"]  # no weekend
+    assert slots["2026-11-19"] == storage.CALL_SLOTS
+
+
+def test_a_fully_booked_day_is_not_offered():
+    taken = [make_lead(call_time=f"2026-11-18 {slot}") for slot in storage.CALL_SLOTS]
+    assert "2026-11-18" not in storage.free_slots(taken, TODAY)
 
 
 def write_sample_file(path):

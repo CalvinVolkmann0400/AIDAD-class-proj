@@ -7,6 +7,7 @@ them to fit a slide.
 |---|---|---|
 | `0-start.png` | Start screen: choose lead, closer or owner | optional |
 | `1-lead-chat.png` | What the lead sees: only the chat, ending with the confirmed call time | 3 |
+| `1b-lead-pick-time.png` | The lead picking their own call time after the chat | optional |
 | `2-closer-dashboard.png` | Closer: numbers, upcoming calls with links, needs attention | 3 |
 | `3-closer-calendar.png` | Closer: upcoming calls by day and call history | optional |
 | `4-lead-brief.png` | A lead's file: the pre-call brief with the score beside it | 1 |

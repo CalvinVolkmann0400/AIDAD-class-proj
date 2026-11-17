@@ -35,7 +35,7 @@ where the funnel leaks."
 
 | | Sees | Screenshot |
 |---|---|---|
-| **Lead** | Only the chat | `1-lead-chat.png` |
+| **Lead** | Only the chat, then picks a call time | `1-lead-chat.png` |
 | **Closer** | Dashboard, call calendar, each lead's brief and score | `2-closer-dashboard.png` |
 | **Owner** | The funnel, all chat logs, the offer file, settings | `6-owner-funnel.png` |
 
@@ -52,7 +52,7 @@ chat link. The AI does the judgement; my code does the checking and the numbers.
 - Python, managed with **uv**
 - **Streamlit** for the screens · **Pydantic** for data shapes · **SQLite** for saving · **pytest** for tests
 - **Google Gemini** (free tier) for the AI
-- About 1,750 lines of Python in 18 small files (comments and prompts included), plus 38 tests
+- About 1,900 lines of Python in 18 small files (comments and prompts included), plus 39 tests
 
 **Say:** "`app.py` works out who you are and only loads that person's pages. The pages never
 talk to the AI directly. They call the engine, and exactly one function in `llm.py` makes the
@@ -142,4 +142,4 @@ real ones."
 - **How do you stop a lead from seeing the closer's pages?** The lead's link only loads the chat page; the other pages are not in that session's page list. But there is no password on the closer and owner views yet. That is first on my list.
 - **Did you write all the code?** I built it with heavy AI assistance and I am working through it file by file (`docs/code-walkthrough.md`). I can explain what each file does.
 - **Is real personal data used?** No. Every person and business is invented, because free-tier content may be used by Google.
-- **How is it tested?** pytest, 38 tests: quote checking, totals and bands, the funnel numbers, saving and loading, and the AI call with a fake client (retries, fallback model, timeout).
+- **How is it tested?** pytest, 39 tests: quote checking, totals and bands, the funnel numbers, saving and loading, and the AI call with a fake client (retries, fallback model, timeout).

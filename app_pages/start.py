@@ -7,7 +7,9 @@ import ui
 
 offer = storage.load_offer()
 
-st.title("Sunsettr")
+ui.wordmark()
+ui.eyebrow("AI lead qualification for sales calls")
+st.title("Know every lead before the call.")
 st.write("A lead chats with an AI, the AI scores the lead, and the closer gets a brief before the call. "
          "Three people use it, and each one sees something different.")
 

@@ -5,15 +5,17 @@ An honest list. "Built" means it works today in this repo.
 ## Built now (Milestone II)
 
 - **Three separate views:** the lead sees only the chat; the closer and the owner each get their own pages
-- **Lead chat** where the AI chooses each question, answers only from the offer file, and confirms a call time at the end
+- **Lead chat** where the AI chooses each question, answers only from the offer file, and then lets the lead pick their own call time
 - **AI scoring** on six dimensions with reasons and quotes, returned as validated JSON, produced automatically when a chat ends
 - **Code checks:** quote verification, total out of 100, bands, "not enough information"
 - **Closer dashboard:** numbers at a glance, upcoming calls with links to brief, score and chat log, and a "needs attention" list
 - **Call calendar:** upcoming calls by day, call history, and recording the result of each call
-- **Owner funnel:** link clicks → chat started → chat finished → showed up → closed, with the biggest leak marked, plus results by score band
+- **Owner funnel:** link clicks → chat started → chat finished → call booked → showed up → closed, with the biggest leak marked, plus results by score band
 - **Leads and chat logs, offer file, settings** for the owner
 - One AI call with a time limit, retries, a fallback model and a Try again button
 - Leads, link clicks and call results saved to SQLite; sample data so the dashboards are never empty
+- A **Demo view** switch on every page, so one person can present all three roles
+- The Sunsettr look: cream and ink, DM Sans, square corners, the rounded chat card
 - Automated tests (pytest)
 
 ## Not built yet
@@ -23,7 +25,7 @@ An honest list. "Built" means it works today in this repo.
 | **No real sign-in.** The start screen lets anyone pick the closer or owner view; there are no passwords. | In a real product only Jordan and the owner could reach those pages. | Medium |
 | **The numbers are mostly sample data.** Call results (showed up, closed) and most link clicks are invented so the dashboards have something to show. | The funnel proves the screens work, not that the product works. | Needs real use |
 | **The score is not validated.** The six dimensions and the bands are my own design. | "Results by score band" is the right check, but with a handful of invented results it proves nothing yet. | Ongoing |
-| **No real calendar.** Call times are slots in my own database (four per day); nothing connects to Google Calendar or Calendly. | A real closer already has a calendar. | Medium |
+| **No real calendar.** Leads pick from slots in my own database (four per weekday); nothing connects to Google Calendar or Calendly, and there are no time zones. | A real closer already has a calendar. | Medium |
 | **The brief is not sent anywhere.** It only appears in the app. | Closers live in email and on their phone. | Small to medium |
 | **One closer, one offer.** | A real business may have several of each. | Medium |
 | **Runs only on my laptop.** The lead link starts with `localhost`. | A real lead could not open it; it needs hosting. | Medium |

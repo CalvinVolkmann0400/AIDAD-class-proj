@@ -117,15 +117,22 @@ def count_clicks(db_file: Path = DB_FILE) -> int:
     return total
 
 
-def next_free_slot(leads: list[Lead], today: date) -> str:
-    """The first call time, from tomorrow onwards, that no other lead has."""
+def free_slots(leads: list[Lead], today: date, days: int = 5) -> dict[str, list[str]]:
+    """The call times a lead can still choose: the next few weekdays, minus times already taken.
+
+    Returns a dictionary like {"2026-11-18": ["10:00", "14:00"], ...}.
+    """
     taken = {lead.call_time for lead in leads}
-    for days_ahead in range(1, 60):
-        for slot in CALL_SLOTS:
-            candidate = f"{today + timedelta(days=days_ahead)} {slot}"
-            if candidate not in taken:
-                return candidate
-    return f"{today + timedelta(days=60)} {CALL_SLOTS[0]}"
+    slots: dict[str, list[str]] = {}
+    day = today
+    while len(slots) < days:
+        day += timedelta(days=1)
+        if day.weekday() >= 5:  # 5 and 6 are Saturday and Sunday
+            continue
+        free = [slot for slot in CALL_SLOTS if f"{day} {slot}" not in taken]
+        if free:
+            slots[str(day)] = free
+    return slots
 
 
 # ---------- Sample data (invented leads that fill the dashboards) ----------

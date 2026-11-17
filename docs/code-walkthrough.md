@@ -52,7 +52,8 @@ and the SQLite database (`sunsettr.db`).
   to put data into SQL.
 - `list_leads()`, `get_lead()`, `get_lead_by_token()` read leads back as `Lead` objects.
 - `add_click()` and `count_clicks()` feed the top of the owner's funnel.
-- `next_free_slot()` finds the first call time (four slots a day, starting tomorrow) nobody has yet.
+- `free_slots()` lists the call times a lead can still pick: the next five weekdays, four slots a
+  day, minus the times other leads already have.
 - `ensure_sample_data()` loads `sample_data.json` once a day. The file stores each call as "so many
   days from today", so the dashboards always have some upcoming calls and some past ones.
 - `sunsettr.db` is git-ignored: it is created the first time the app runs.
@@ -123,8 +124,8 @@ and the SQLite database (`sunsettr.db`).
 
 **Ideas to understand.**
 
-- `funnel(leads, clicks)` returns five `Stage` objects: clicked the link, started the chat,
-  finished the chat, showed up, closed. Each stage knows its `count` and what it is `out_of`,
+- `funnel(leads, clicks)` returns six `Stage` objects: clicked the link, started the chat,
+  finished the chat, booked a call, showed up, closed. Each stage knows its `count` and what it is `out_of`,
   and `rate` is one divided by the other.
 - "Showed up" is measured out of calls **that have a recorded result**, not all booked calls,
   because calls that have not happened yet cannot be a no-show.
@@ -163,7 +164,8 @@ just "pass in the thing you depend on, so you can swap it".
   `st.navigation(PAGES[role], ...)` registers only those pages, so a lead's session simply does
   not contain the closer's or owner's pages.
 - The lead and the start screen get `position="hidden"` (no menu at all); the closer and the
-  owner get a sidebar with a **Switch role** button.
+  owner get a sidebar with the wordmark and the **Demo view** switch.
+- `ui.brand()` is called once here, so every page gets the Sunsettr styling.
 - This is role separation, not security: there are no passwords yet. That is the first item in
   `docs/remaining-tasks.md`.
 
@@ -177,7 +179,12 @@ just "pass in the thing you depend on, so you can swap it".
 - `ask_for_retry()` sets a flag in `st.session_state`; on the next rerun the page sees the flag
   and runs the AI step again.
 - `generate_missing()` asks the AI for a lead's score and brief if they are not there yet, and saves them.
-- `set_role()` and `open_lead()` move between roles and pages.
+- `set_role()` and `open_lead()` move between roles and pages. `demo_switch()` draws the
+  Lead / Closer / Owner control that lets one presenter show all three views; a real lead would not have it.
+- `BRAND_CSS`, `brand()`, `wordmark()`, `eyebrow()` and `bar()` hold the small amount of styling the
+  theme file cannot express: the two-colour wordmark, the label with the pink dash, the pink progress
+  bars, the rounded chat card and the chat bubbles. Everything else about the look (colours, font,
+  square corners) lives in `.streamlit/config.toml`.
 - `plain()` escapes dollar signs, because Streamlit would otherwise read `$3,000 … $1,100` as a
   maths formula. `percent()` and `nice_time()` format numbers and dates.
 - `show_chat()`, `show_score_cards()`, `show_score_compact()` and `show_brief()` draw a lead's
@@ -192,7 +199,7 @@ All of them follow the same pattern: read what is needed from the database, deci
 | File | Who | What it does |
 |---|---|---|
 | `start.py` | everyone | Three cards for choosing a role |
-| `lead_chat.py` | lead | Counts the link click, asks the name, runs the chat, books the call, then quietly asks the AI for the score and brief |
+| `lead_chat.py` | lead | Counts the link click, asks the name, runs the chat, quietly asks the AI for the score and brief, then lets the lead pick a call time |
 | `closer_dashboard.py` | closer | Five numbers, upcoming calls with Brief / Score / Chat log buttons, and "needs attention" |
 | `closer_calendar.py` | closer | Upcoming calls by day with result buttons, and the history table |
 | `lead_file.py` | closer, owner | One lead: call result, brief, score cards, chat log, and "Generate now" if the AI has not scored it |

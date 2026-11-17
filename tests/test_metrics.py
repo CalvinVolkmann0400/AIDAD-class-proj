@@ -35,8 +35,8 @@ LEADS = [
 
 def test_funnel_counts_each_level():
     stages = metrics.funnel(LEADS, clicks=20)
-    assert [stage.count for stage in stages] == [20, 6, 5, 2, 1]
-    assert [stage.out_of for stage in stages] == [20, 20, 6, 3, 2]  # showed is out of the 3 calls with a result
+    assert [stage.count for stage in stages] == [20, 6, 5, 5, 2, 1]
+    assert [stage.out_of for stage in stages] == [20, 20, 6, 5, 3, 2]  # showed is out of the 3 calls with a result
     assert stages[1].rate == 0.3
 
 
@@ -72,8 +72,11 @@ def test_needs_attention_flags_missing_outcomes_and_thin_chats():
     thin = lead("thin", "2026-11-18 10:00")
     thin.score = score(0, enough=False)
     unscored = lead("unscored", "2026-11-19 10:00", points=None)
-    reasons = {l.name: reason for l, reason in metrics.needs_attention(LEADS + [overdue, thin, unscored], TODAY)}
-    assert set(reasons) == {"overdue", "thin", "unscored"}
+    not_booked = lead("not-booked")  # finished the chat, never picked a time
+    extra = [overdue, thin, unscored, not_booked]
+    reasons = {l.name: reason for l, reason in metrics.needs_attention(LEADS + extra, TODAY)}
+    assert set(reasons) == {"overdue", "thin", "unscored", "not-booked"}
+    assert metrics.funnel(LEADS + extra, clicks=30)[3].count == 8  # booked: not-booked is left out
     assert "Record" in reasons["overdue"] and "too little" in reasons["thin"]
 
 

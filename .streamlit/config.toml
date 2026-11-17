@@ -1,0 +1,57 @@
+# The look of the app, matched to the Sunsettr site's design language:
+# cream paper, ink text and ink buttons, pink and orange only as accents,
+# one typeface (DM Sans) with heavy headings, and square corners.
+
+[theme]
+base = "light"
+primaryColor = "#24201e"              # ink: primary buttons and selected controls
+backgroundColor = "#fffdf7"           # cream: the page
+secondaryBackgroundColor = "#f1ece2"  # panel: inputs, quiet panels
+textColor = "#24201e"                 # ink
+linkColor = "#b73073"                 # berry: the text-safe pink
+borderColor = "#24201e"               # one border weight, in ink
+dataframeBorderColor = "#ded8cc"      # rule: hairlines inside tables
+dataframeHeaderBackgroundColor = "#f1ece2"
+codeBackgroundColor = "#faf4e8"       # warm
+codeTextColor = "#24201e"
+
+font = "'DM Sans':https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..900&display=swap"
+headingFont = "'DM Sans':https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400..900&display=swap"
+headingFontWeights = [850, 830, 800, 750, 750, 750]
+metricValueFontWeight = 800
+
+baseRadius = "none"                   # square by default
+buttonRadius = "none"
+showWidgetBorder = true
+showSidebarBorder = true
+
+# Status colours. Green is "good"; attention and errors sit on the pink tint; info sits on warm.
+greenColor = "#1f7a4d"
+greenTextColor = "#1f7a4d"
+greenBackgroundColor = "#faf4e8"
+blueColor = "#24201e"
+blueTextColor = "#24201e"
+blueBackgroundColor = "#faf4e8"
+yellowColor = "#b73073"
+yellowTextColor = "#24201e"
+yellowBackgroundColor = "#fbe3ee"
+orangeColor = "#f69d37"
+orangeTextColor = "#565049"
+orangeBackgroundColor = "#faf4e8"
+redColor = "#b73073"
+redTextColor = "#972552"
+redBackgroundColor = "#fbe3ee"
+violetColor = "#f5469d"
+violetTextColor = "#b73073"
+violetBackgroundColor = "#fbe3ee"
+grayColor = "#6a665f"
+grayTextColor = "#565049"
+grayBackgroundColor = "#f1ece2"
+
+chartCategoricalColors = ["#f5469d", "#f69d37", "#24201e", "#1f7a4d", "#b73073"]
+
+[theme.sidebar]
+backgroundColor = "#faf4e8"           # warm
+secondaryBackgroundColor = "#f1ece2"
+textColor = "#24201e"
+borderColor = "#24201e"

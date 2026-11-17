@@ -1,6 +1,7 @@
 # Two-minute live demo script
 
 The path: **start screen → lead chat (two answers, live) → closer dashboard → one lead's brief → owner funnel.**
+You move between the three views with the **Demo view** switch (Lead / Closer / Owner), which is on every page.
 
 Typing two answers shows the AI really choosing its questions. Everything after that reads
 saved leads from the database, so it cannot stall.
@@ -17,7 +18,7 @@ saved leads from the database, so it cannot stall.
 3. Click **Continue as the owner**, open **Settings**, and click **Test the AI connection**.
    - "success" means the live chat is safe to try.
    - If it fails or takes more than about 10 seconds, skip Step 1 below and start at Step 2.
-4. Click **Switch role** in the sidebar to get back to the start screen.
+4. Refresh the page (F5) to get back to the start screen.
 5. Make the browser text bigger (Ctrl and +) so the back row can read it.
 
 ## The demo
@@ -43,11 +44,15 @@ Type the second answer, which includes a question back to the AI:
 > I tried an online course last year but never finished it. How much does your program cost?
 
 **Say:** "It may only answer from the offer file, so the price is the one in the file. When the
-chat ends, the lead gets a call time, and the AI scores the chat and writes a brief for the closer."
+chat ends, the lead picks their own call time, and the AI scores the chat and writes a brief for
+the closer."
+
+(If you have a spare minute, finish the chat with two or three more answers, pick a day and a time,
+and click **Confirm my call**. The new lead then shows up on the closer's dashboard in Step 2.)
 
 ### Step 2 — the closer's view (about 40 seconds)
 
-Open a **new browser tab** at `http://localhost:8501` and click **Continue as Jordan**.
+In the **Demo view** switch at the top right of the chat, click **Closer**.
 
 **Say:** "This is Jordan, the closer. Numbers at the top, then today's and upcoming calls. Each
 call has the lead's score and one line about them."
@@ -62,12 +67,12 @@ quote for each, and my code checked every quote really appears in the chat."
 
 ### Step 3 — the owner's view (about 35 seconds)
 
-Click **Switch role**, then **Continue as the owner**.
+In the **Demo view** switch in the sidebar, click **Owner**.
 
 **Say:** "And this is the owner. The funnel goes level by level: who clicked the link, who started
-the chat, who finished, who showed up to the call, who bought. The app marks the biggest leak."
+the chat, who finished, who booked a call, who showed up, who bought. The app marks the biggest leak."
 
-Point at the yellow **Biggest leak** box, then scroll to **Results by score band**.
+Point at the pink **Biggest leak** box, then scroll to **Results by score band**.
 
 **Say:** "This last table is the honest test of the idea: do higher scores show up and close more?
 Right now it's sample data, so it's an illustration. Collecting real results is my next step."
@@ -90,6 +95,7 @@ honest message.
 
 - The closer and owner pages never call the AI, so Steps 2 and 3 always work.
 - Refreshing a closer or owner page sends you back to the start screen (there is no real sign-in). Just pick the role again.
+- Switching from Lead to Closer and back keeps the same lead chat. To play a second lead, finish the first one and click **Start another lead chat (demo)**.
 - The lead's chat survives a refresh, because its link contains that lead's personal code.
 - Dashboards say "Includes sample data" at the top. If asked: the sample leads' chats, scores and briefs came from the real AI; their call results are invented.
 

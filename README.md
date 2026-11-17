@@ -11,11 +11,20 @@ It is the class-sized version of a startup idea. Everything in it is invented: t
 
 | Who | How they get in | What they see |
 |---|---|---|
-| **Lead** | The lead chat link (`…/?lead=new`) | Only the chat. No menu, no score, no brief. The AI says it is an AI, asks 5 to 7 questions, answers questions only from the offer file, and confirms the call time at the end. |
+| **Lead** | The lead chat link (`…/?lead=new`) | Only the chat. No menu, no score, no brief. The AI says it is an AI, asks 5 to 7 questions, answers questions only from the offer file, and then the lead picks their own call time from the free slots. |
 | **Closer** | "Continue as Jordan" on the start screen | **Dashboard** (their numbers, upcoming calls with links to each brief, score and chat log, and what needs attention), **Call calendar** (upcoming calls by day, history, recording call results), **Lead file** (brief, score, chat log for one lead). |
-| **Owner** | "Continue as the owner" on the start screen | **Funnel** (link clicks → chat started → chat finished → showed up → closed, with the biggest leak marked, plus results by score band), **Leads and chat logs**, **Lead file**, **Offer file**, **Settings**. |
+| **Owner** | "Continue as the owner" on the start screen | **Funnel** (link clicks → chat started → chat finished → call booked → showed up → closed, with the biggest leak marked, plus results by score band), **Leads and chat logs**, **Lead file**, **Offer file**, **Settings**. |
 
-There is no real sign-in yet: the start screen is demo access, and it says so on screen.
+There is no real sign-in yet: the start screen is demo access, and it says so on screen. Every view
+also has a small **Demo view** switch (Lead / Closer / Owner) so one person can present all three.
+
+## The look
+
+The app follows the Sunsettr design language: cream page, ink text and ink buttons, pink and
+orange only as accents, one typeface (DM Sans) with heavy headings, square corners, and the chat
+as the one rounded card with a solid offset shadow. Most of it is set in `.streamlit/config.toml`;
+the few things the theme file cannot express (the wordmark, chat bubbles, pink bars) are a short
+block of CSS at the top of `ui.py`.
 
 ## How to run it
 
@@ -135,7 +144,9 @@ In a few sentences:
 app.py               entry point: works out the role and shows that role's pages
 app_pages/           start, lead_chat, closer_dashboard, closer_calendar, lead_file,
                      owner_funnel, owner_leads, offer, settings
-ui.py                shared on-screen helpers (spinner, error + Try again, score and brief display)
+ui.py                shared on-screen helpers (brand styling, demo switch, spinner, error + Try again,
+                     score and brief display)
+.streamlit/config.toml   the theme: colours, font, square corners
 engine.py            prompts, the three AI tasks, quote check, total and band
 metrics.py           funnel and dashboard numbers
 llm.py               the single AI call (timeout, retries, errors)

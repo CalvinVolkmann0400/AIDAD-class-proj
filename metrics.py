@@ -43,18 +43,20 @@ def call_day(lead: Lead) -> date | None:
 
 
 def funnel(leads: list[Lead], clicks: int) -> list[Stage]:
-    """The five levels: link clicks, chat started, chat finished, showed up, closed."""
+    """The six levels: link clicks, chat started, chat finished, call booked, showed up, closed."""
     started = [lead for lead in leads if has_started(lead)]
     finished = [lead for lead in started if lead.chat_done]
-    held = [lead for lead in finished if lead.outcome != "pending"]  # calls with a recorded result
+    booked = [lead for lead in finished if lead.call_time]
+    held = [lead for lead in booked if lead.outcome != "pending"]  # calls with a recorded result
     showed = [lead for lead in held if showed_up(lead)]
     closed = [lead for lead in showed if lead.outcome == "closed"]
     clicks = max(clicks, len(started))  # everyone who chatted must have clicked
-    waiting = len(finished) - len(held)
+    waiting = len(booked) - len(held)
     return [
         Stage("Clicked the link", clicks, clicks),
         Stage("Started the chat", len(started), clicks),
         Stage("Finished the chat", len(finished), len(started)),
+        Stage("Booked a call", len(booked), len(finished)),
         Stage("Showed up to the call", len(showed), len(held), "calls that have a recorded result",
               f"{waiting} booked calls have not happened yet, so they are not counted here."),
         Stage("Closed", len(closed), len(showed)),
@@ -108,6 +110,9 @@ def needs_attention(leads: list[Lead], today: date) -> list[tuple[Lead, str]]:
     for lead in past_calls(leads, today):
         if lead.outcome == "pending":
             items.append((lead, "The call day has passed. Record what happened."))
+    for lead in leads:
+        if lead.chat_done and not lead.call_time:
+            items.append((lead, "Finished the chat but has not picked a call time yet."))
     for lead in upcoming_calls(leads, today):
         if lead.score is None or lead.brief is None:
             items.append((lead, "The score and brief have not been generated yet."))
