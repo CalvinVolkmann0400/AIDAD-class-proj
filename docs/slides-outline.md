@@ -52,7 +52,7 @@ chat link. The AI does the judgement; my code does the checking and the numbers.
 - Python, managed with **uv**
 - **Streamlit** for the screens · **Pydantic** for data shapes · **SQLite** for saving · **pytest** for tests
 - **Google Gemini** (free tier) for the AI
-- About 1,750 lines of Python in 20 small files (comments and prompts included), plus 38 tests
+- About 1,750 lines of Python in 18 small files (comments and prompts included), plus 38 tests
 
 **Say:** "`app.py` works out who you are and only loads that person's pages. The pages never
 talk to the AI directly. They call the engine, and exactly one function in `llm.py` makes the
