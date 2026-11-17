@@ -21,15 +21,11 @@ import storage
 from models import Message
 
 SAMPLE_FILE = Path(__file__).parent / "sample_data.json"
-PAUSE_SECONDS = 2  # stay well under the free tier's requests-per-minute limit
-# The free tier can be very slow, and nobody is waiting on this script. So: give each call
-# plenty of time, send one request at a time, and after a failure wait a while before trying again.
-llm.TIMEOUT_SECONDS = 240
-llm.HARD_LIMIT_SECONDS = 245
-llm.MAX_ATTEMPTS = 1
+PAUSE_SECONDS = 1  # a short gap between requests, to stay under the free tier's per-minute limit
+# Use one model for the whole run, so every sample lead can be labelled with the model that made it.
 llm.FALLBACK_MODEL = llm.MODEL
-WAIT_AFTER_FAILURE = 120
-PATIENT_TRIES = 8
+WAIT_AFTER_FAILURE = 30  # if the AI fails, wait this long and try the same step again
+PATIENT_TRIES = 4
 CLICKS_ONLY = 22  # invented: people who opened the chat link and never typed anything
 
 # Words in the AI's question that tell us which scripted answer fits.

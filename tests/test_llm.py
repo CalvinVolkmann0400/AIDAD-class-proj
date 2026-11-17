@@ -42,10 +42,10 @@ def test_good_answer_is_returned_as_a_pydantic_object():
     assert llm.ask_ai("s", "p", Answer, client=client, sleep=no_sleep).word == "hello"
 
 
-def test_busy_errors_are_retried_and_last_try_uses_the_fallback_model():
+def test_busy_errors_are_retried_and_the_second_try_uses_the_fallback_model():
     client = ScriptedClient(BusyError("overloaded"), BusyError("overloaded"), '{"word": "ok"}')
     assert llm.ask_ai("s", "p", Answer, client=client, sleep=no_sleep).word == "ok"
-    assert client.models_used == [llm.MODEL, llm.MODEL, llm.FALLBACK_MODEL]
+    assert client.models_used == [llm.MODEL, llm.FALLBACK_MODEL, llm.MODEL]
 
 
 def test_gives_an_honest_error_after_all_tries_fail():

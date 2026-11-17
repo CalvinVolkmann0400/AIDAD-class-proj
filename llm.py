@@ -19,9 +19,12 @@ from pydantic import BaseModel, ValidationError
 load_dotenv()
 
 # ---- Settings that are easy to change ----
-MODEL = "gemini-3.6-flash"  # main model (free tier)
-FALLBACK_MODEL = "gemini-3.5-flash-lite"  # lighter model, used for the last try
-TIMEOUT_SECONDS = 30  # give up on one try after this long
+# Both are free-tier models. The free tier allows only a small number of requests per day for
+# each model (gemini-3.6-flash: 20 a day), so the app uses two light, fast models and switches
+# between them when one is busy or has run out of free requests for the day.
+MODEL = "gemini-3.5-flash-lite"  # main model
+FALLBACK_MODEL = "gemini-3.1-flash-lite"  # used on the second try
+TIMEOUT_SECONDS = 20  # give up on one try after this long
 HARD_LIMIT_SECONDS = TIMEOUT_SECONDS + 5  # safety net in case the SDK's own timeout fails
 MAX_ATTEMPTS = 3  # how many tries before we show an error
 WAIT_SECONDS = [2, 5]  # pause before try 2, then before try 3 ("backoff")
@@ -39,21 +42,27 @@ class GeminiClient:
 
     def __init__(self):
         from google import genai  # imported here so tests never need the real SDK
+        from google.genai import types
 
-        self._client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
+        self._types = types
+        self._client = genai.Client(
+            api_key=os.environ["GEMINI_API_KEY"],
+            http_options=types.HttpOptions(timeout=TIMEOUT_SECONDS * 1000),  # the SDK wants milliseconds
+        )
 
     def generate(self, model: str, system: str, prompt: str, schema: dict) -> str:
         """Send one request and return the AI's answer as JSON text."""
-        interaction = self._client.interactions.create(
+        response = self._client.models.generate_content(
             model=model,
-            system_instruction=system,
-            input=prompt,
-            # Ask for JSON that follows our schema ("structured output").
-            response_format={"type": "text", "mime_type": "application/json", "schema": schema},
-            store=False,  # do not keep the conversation on Google's servers
-            timeout=TIMEOUT_SECONDS,
+            contents=prompt,
+            config=self._types.GenerateContentConfig(
+                system_instruction=system,
+                # Ask for JSON that follows our schema ("structured output").
+                response_mime_type="application/json",
+                response_json_schema=schema,
+            ),
         )
-        return interaction.output_text
+        return response.text or ""
 
 
 def has_api_key() -> bool:
@@ -86,7 +95,7 @@ def ask_ai(system: str, prompt: str, answer_shape: type[BaseModel], client=None,
     schema = answer_shape.model_json_schema()
     problem = ""
     for attempt in range(1, MAX_ATTEMPTS + 1):
-        model = FALLBACK_MODEL if attempt == MAX_ATTEMPTS else MODEL
+        model = FALLBACK_MODEL if attempt % 2 == 0 else MODEL  # tries go: main, fallback, main
         try:
             text = _call_with_time_limit(client, model, system, prompt, schema)
             return answer_shape.model_validate_json(text)  # Pydantic checks the shape
@@ -95,7 +104,7 @@ def ask_ai(system: str, prompt: str, answer_shape: type[BaseModel], client=None,
         except Exception as error:
             if not _is_temporary(error):
                 raise AIError(f"The AI service refused the request: {_describe(error)}") from error
-            problem = "the service was busy or too slow"
+            problem = "the service was busy, too slow, or out of free requests for today"
         print(f"[AI] try {attempt} of {MAX_ATTEMPTS} with {model} failed: {problem}")  # shows in the terminal
         if attempt < MAX_ATTEMPTS:
             sleep(WAIT_SECONDS[attempt - 1])

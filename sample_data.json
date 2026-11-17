@@ -1,0 +1,1420 @@
+{
+  "note": "Invented sample leads. Chats, scores and briefs were produced by the real AI (Sam Rivera live in the app with gemini-3.6-flash, the rest by seed.py with gemini-3.5-flash-lite). Call outcomes and click counts are invented.",
+  "clicks_only": 22,
+  "leads": [
+    {
+      "name": "Sam Rivera",
+      "source": "gemini-3.6-flash",
+      "chat_done": true,
+      "call_in_days": 0,
+      "call_at": "14:00",
+      "outcome": "pending",
+      "messages": [
+        {
+          "role": "ai",
+          "text": "Hi Sam! I'm an AI assistant working with Jordan at Maya Coaching. I'm not a person. I'll ask a few short questions so Jordan can prepare for your call, and you can ask me anything about the program. To start: what made you book a call now?"
+        },
+        {
+          "role": "lead",
+          "text": "I lost two big clients this spring and my income has been up and down ever since. I can't keep guessing where next month's rent comes from."
+        },
+        {
+          "role": "ai",
+          "text": "That sounds really stressful to deal with, Sam. What have you already tried so far to bring in new steady clients?"
+        },
+        {
+          "role": "lead",
+          "text": "I bought an online marketing course last year for about $500 but never finished it, and I've mostly relied on referrals. How much does your program cost?"
+        },
+        {
+          "role": "ai",
+          "text": "The 90-Day Momentum Program is $3,000 paid up front, or three monthly payments of $1,100. It sounds like relying only on referrals has been tough to scale. Besides yourself, is anyone else involved in making decisions about your business?"
+        },
+        {
+          "role": "lead",
+          "text": "No, it's just me. I run the business on my own, so the decision is mine. Is there a refund if it doesn't work out?"
+        },
+        {
+          "role": "ai",
+          "text": "Jordan will cover refund policies directly with you on the call. Thanks for letting me know you make the decisions solo. Looking ahead, what specific result would make this program completely worth it for you?"
+        },
+        {
+          "role": "lead",
+          "text": "If I had three steady retainer clients by the end of the quarter, that would make it worth it. That would cover my basics every month."
+        },
+        {
+          "role": "ai",
+          "text": "Having three steady retainer clients to cover your basics sounds like a clear, solid target. If you and Jordan decide this program is a good fit during your call, how soon are you looking to get started?"
+        },
+        {
+          "role": "lead",
+          "text": "I'd want to start within the next two weeks. I can put in about five hours a week on top of client work."
+        },
+        {
+          "role": "ai",
+          "text": "Thank you for sharing all of that, Sam! Jordan will read a summary of our conversation before your call so you can jump right in."
+        }
+      ],
+      "score": {
+        "enough_information": true,
+        "dimensions": [
+          {
+            "name": "pain",
+            "score": 5,
+            "reason": "The lead faces significant financial instability after losing two major clients.",
+            "quote": "I lost two big clients this spring and my income has been up and down ever since. I can't keep guessing where next month's rent comes from.",
+            "quote_verified": true
+          },
+          {
+            "name": "urgency",
+            "score": 4,
+            "reason": "The lead wants to begin working on the issue within two weeks.",
+            "quote": "I'd want to start within the next two weeks. I can put in about five hours a week on top of client work.",
+            "quote_verified": true
+          },
+          {
+            "name": "decision authority",
+            "score": 5,
+            "reason": "The lead runs their business solo and holds full decision authority.",
+            "quote": "No, it's just me. I run the business on my own, so the decision is mine. Is there a refund if it doesn't work out?",
+            "quote_verified": true
+          },
+          {
+            "name": "fit with the offer",
+            "score": 5,
+            "reason": "The lead is a solo practitioner seeking steady retainer clients which aligns with the program goal.",
+            "quote": "If I had three steady retainer clients by the end of the quarter, that would make it worth it. That would cover my basics every month.",
+            "quote_verified": true
+          },
+          {
+            "name": "investment readiness",
+            "score": 4,
+            "reason": "The lead has previously invested in a marketing course and clearly stated what outcome makes this program worth it.",
+            "quote": "I bought an online marketing course last year for about $500 but never finished it, and I've mostly relied on referrals. How much does your program cost?",
+            "quote_verified": true
+          },
+          {
+            "name": "commitment",
+            "score": 4,
+            "reason": "The lead is willing to dedicate five hours weekly to implement the program.",
+            "quote": "I'd want to start within the next two weeks. I can put in about five hours a week on top of client work.",
+            "quote_verified": true
+          }
+        ]
+      },
+      "brief": {
+        "summary_lines": [
+          "Sam is a solo business owner seeking three steady retainer clients to establish predictable business income.",
+          "Lost two major clients this spring and needs a proactive way to get clients beyond relying solely on referrals.",
+          "Sole decision maker who wants to start within two weeks and can dedicate five hours a week."
+        ],
+        "key_quotes": [
+          "I lost two big clients this spring and my income has been up and down ever since. I can't keep guessing where next month's rent comes from.",
+          "If I had three steady retainer clients by the end of the quarter, that would make it worth it. That would cover my basics every month.",
+          "I'd want to start within the next two weeks. I can put in about five hours a week on top of client work."
+        ],
+        "unknowns": [
+          "What specific outreach or marketing strategies Sam has tried outside of referrals and the online course.",
+          "What past investments or support have been most effective for Sam when growing the business."
+        ],
+        "opening_line": "Hi Sam, you mentioned wanting to get three steady retainer clients by the end of the quarter to cover your basics every month, so I would love to jump right in and look at how we can make that happen."
+      }
+    },
+    {
+      "name": "Tom Okafor",
+      "source": "gemini-3.5-flash-lite",
+      "chat_done": true,
+      "call_in_days": 1,
+      "call_at": "10:00",
+      "outcome": "pending",
+      "messages": [
+        {
+          "role": "ai",
+          "text": "Hi Tom! I'm an AI assistant working with Jordan at Maya Coaching. I'm not a person. I'll ask a few short questions so Jordan can prepare for your call, and you can ask me anything about the program. To start: what made you book a call now?"
+        },
+        {
+          "role": "lead",
+          "text": "I'm a wedding photographer and bookings for next season are way down. I want corporate clients so I'm not relying on weddings."
+        },
+        {
+          "role": "ai",
+          "text": "That makes total sense given how seasonal weddings can be. Have you tried any specific methods yet to attract corporate clients?"
+        },
+        {
+          "role": "lead",
+          "text": "I ran Instagram ads for two months and spent about $800. I got likes but only one enquiry."
+        },
+        {
+          "role": "ai",
+          "text": "Ads can definitely burn budget fast without bringing in real leads. Besides yourself, is anyone else involved in deciding to join a program like ours?"
+        },
+        {
+          "role": "lead",
+          "text": "It's my business, so it's my decision."
+        },
+        {
+          "role": "ai",
+          "text": "That keeps things simple. What result from our 90-Day Momentum Program would make it completely worth it for you?"
+        },
+        {
+          "role": "lead",
+          "text": "Two corporate clients who book me every quarter would make this worth it."
+        },
+        {
+          "role": "ai",
+          "text": "Securing two recurring corporate clients would completely change your off-season. How ready are you to start working on this as soon as next week?"
+        },
+        {
+          "role": "lead",
+          "text": "In about six weeks, when wedding season ends. I can't take on anything before that."
+        },
+        {
+          "role": "ai",
+          "text": "Thanks for sharing that, Tom. Jordan will read a summary of our chat before your call."
+        }
+      ],
+      "score": {
+        "enough_information": true,
+        "dimensions": [
+          {
+            "name": "pain",
+            "score": 4,
+            "reason": "The lead clearly stated that bookings for next season are way down.",
+            "quote": "I'm a wedding photographer and bookings for next season are way down.",
+            "quote_verified": true
+          },
+          {
+            "name": "urgency",
+            "score": 3,
+            "reason": "The lead wants to transition to corporate clients but cannot start until wedding season ends in six weeks.",
+            "quote": "In about six weeks, when wedding season ends. I can't take on anything before that.",
+            "quote_verified": true
+          },
+          {
+            "name": "decision authority",
+            "score": 5,
+            "reason": "The lead confirmed that it is their own business and solely their decision.",
+            "quote": "It's my business, so it's my decision.",
+            "quote_verified": true
+          },
+          {
+            "name": "fit with the offer",
+            "score": 4,
+            "reason": "The lead is a solo photographer looking for steadier client income through corporate clients, which matches the target audience.",
+            "quote": "I want corporate clients so I'm not relying on weddings.",
+            "quote_verified": true
+          },
+          {
+            "name": "investment readiness",
+            "score": 4,
+            "reason": "The lead previously invested money into Instagram ads and clearly stated what outcome would make the program worth it.",
+            "quote": "Two corporate clients who book me every quarter would make this worth it.",
+            "quote_verified": true
+          },
+          {
+            "name": "commitment",
+            "score": 3,
+            "reason": "The lead is motivated to solve the problem but delayed starting until their current season ends.",
+            "quote": "In about six weeks, when wedding season ends. I can't take on anything before that.",
+            "quote_verified": true
+          }
+        ]
+      },
+      "brief": {
+        "summary_lines": [
+          "Tom is a wedding photographer experiencing slow bookings for next season.",
+          "He wants to pivot into corporate clients to avoid relying solely on weddings.",
+          "He is ready to start in about six weeks when wedding season ends."
+        ],
+        "key_quotes": [
+          "I'm a wedding photographer and bookings for next season are way down. I want corporate clients so I'm not relying on weddings.",
+          "I ran Instagram ads for two months and spent about $800. I got likes but only one enquiry.",
+          "Two corporate clients who book me every quarter would make this worth it."
+        ],
+        "unknowns": [
+          "What specific types of corporate clients he wants to target.",
+          "What his current outreach approach looks like beyond Instagram ads.",
+          "Whether he has invested in solving client acquisition before."
+        ],
+        "opening_line": "Hi Tom, I read you are looking to secure two corporate clients who book you every quarter, so let us talk about how to make that happen."
+      }
+    },
+    {
+      "name": "Chloe Martin",
+      "source": "gemini-3.5-flash-lite",
+      "chat_done": true,
+      "call_in_days": 0,
+      "call_at": "16:30",
+      "outcome": "pending",
+      "messages": [
+        {
+          "role": "ai",
+          "text": "Hi Chloe! I'm an AI assistant working with Jordan at Maya Coaching. I'm not a person. I'll ask a few short questions so Jordan can prepare for your call, and you can ask me anything about the program. To start: what made you book a call now?"
+        },
+        {
+          "role": "lead",
+          "text": "Not sure."
+        },
+        {
+          "role": "ai",
+          "text": "No problem, sometimes it is just the right time to get some traction. What is the main problem you are hoping to solve with your client income right now?"
+        },
+        {
+          "role": "lead",
+          "text": "No."
+        },
+        {
+          "role": "ai",
+          "text": "That is totally fine. What have you already tried to get steadier client income before this?"
+        },
+        {
+          "role": "lead",
+          "text": "Maybe."
+        },
+        {
+          "role": "ai",
+          "text": "It looks like you might be busy, so I will keep this quick. What result would make joining the 90-Day Momentum Program worth it for you?"
+        },
+        {
+          "role": "lead",
+          "text": "Don't know."
+        },
+        {
+          "role": "ai",
+          "text": "No worries at all, Chloe. Are you the only person who decides on joining, or is anyone else involved in that decision?"
+        },
+        {
+          "role": "lead",
+          "text": "Me."
+        },
+        {
+          "role": "ai",
+          "text": "Thanks for sharing that, Chloe. Jordan will read a summary of our chat before your call."
+        }
+      ],
+      "score": {
+        "enough_information": false,
+        "dimensions": [
+          {
+            "name": "pain",
+            "score": 0,
+            "reason": "The lead gave a negative response and did not share any specific problem.",
+            "quote": "No.",
+            "quote_verified": true
+          },
+          {
+            "name": "urgency",
+            "score": 0,
+            "reason": "The lead expressed uncertainty about why she booked a call now.",
+            "quote": "Not sure.",
+            "quote_verified": true
+          },
+          {
+            "name": "decision authority",
+            "score": 3,
+            "reason": "The lead indicated that she makes the decision herself.",
+            "quote": "Me.",
+            "quote_verified": true
+          },
+          {
+            "name": "fit with the offer",
+            "score": 0,
+            "reason": "The lead did not provide enough details to determine if the offer matches her needs.",
+            "quote": "",
+            "quote_verified": false
+          },
+          {
+            "name": "investment readiness",
+            "score": 0,
+            "reason": "The lead did not state what would make the program worth it or what she has tried before.",
+            "quote": "Don't know.",
+            "quote_verified": true
+          },
+          {
+            "name": "commitment",
+            "score": 0,
+            "reason": "The lead gave minimal, hesitant answers and showed no clear sign of readiness to start.",
+            "quote": "Maybe.",
+            "quote_verified": true
+          }
+        ]
+      },
+      "brief": {
+        "summary_lines": [
+          "Chloe is a solo decision maker who booked a call without a clear current goal.",
+          "She has not shared any specific problems regarding her client income or previous efforts.",
+          "She is at a very early stage of readiness with low current engagement."
+        ],
+        "key_quotes": [
+          "Not sure.",
+          "No.",
+          "Maybe.",
+          "Don't know.",
+          "Me."
+        ],
+        "unknowns": [
+          "What her current situation is with freelancing or solo consulting",
+          "What specific problems or inconsistencies she faces with client income",
+          "What she has previously tried to get steadier client income"
+        ],
+        "opening_line": "Hi Chloe, you mentioned you were not quite sure what made you book today, so I would love to hear what is on your mind regarding your client income right now."
+      }
+    },
+    {
+      "name": "Priya Nair",
+      "source": "gemini-3.5-flash-lite",
+      "chat_done": true,
+      "call_in_days": -1,
+      "call_at": "10:00",
+      "outcome": "closed",
+      "messages": [
+        {
+          "role": "ai",
+          "text": "Hi Priya! I'm an AI assistant working with Jordan at Maya Coaching. I'm not a person. I'll ask a few short questions so Jordan can prepare for your call, and you can ask me anything about the program. To start: what made you book a call now?"
+        },
+        {
+          "role": "lead",
+          "text": "My anchor client ended our contract last month and it was 60% of my design income. I need a real system for finding clients instead of hoping."
+        },
+        {
+          "role": "ai",
+          "text": "That is a stressful situation, but setting up a reliable system is the exact right move. What have you already tried to find new clients so far?"
+        },
+        {
+          "role": "lead",
+          "text": "I worked with a business coach two years ago and it paid for itself, and I've been posting on LinkedIn every week, but nothing consistent comes from it."
+        },
+        {
+          "role": "ai",
+          "text": "Posting on LinkedIn regularly takes effort, so it is frustrating when it does not pay off. Are you the only one making decisions on joining a program like ours, or is there anyone else involved?"
+        },
+        {
+          "role": "lead",
+          "text": "It's my decision. I'm a one-person studio."
+        },
+        {
+          "role": "ai",
+          "text": "That makes it simpler to move quickly. What result from our 90-Day Momentum Program would make this investment completely worth it for you?"
+        },
+        {
+          "role": "lead",
+          "text": "Two new retainer clients in the next three months would make it clearly worth it. What exactly is included in the program?"
+        },
+        {
+          "role": "ai",
+          "text": "That is a very clear and achievable goal. The program includes a 60-minute one-to-one coaching call every week for 12 weeks, a personal 90-day client-getting plan built in week one, message support between calls answered within one business day, and templates for outreach messages, proposals, and pricing. How ready are you to start if Jordan confirms this is a good fit on your call?"
+        },
+        {
+          "role": "lead",
+          "text": "Next week if possible. I've already blocked out Friday mornings for this."
+        },
+        {
+          "role": "ai",
+          "text": "Thanks, Priya. Jordan will read a summary of this before your call."
+        }
+      ],
+      "score": {
+        "enough_information": true,
+        "dimensions": [
+          {
+            "name": "pain",
+            "score": 5,
+            "reason": "The lead lost a major client that provided sixty percent of her income.",
+            "quote": "My anchor client ended our contract last month and it was 60% of my design income. I need a real system for finding clients instead of hoping.",
+            "quote_verified": true
+          },
+          {
+            "name": "urgency",
+            "score": 5,
+            "reason": "The lead wants to start next week and has already blocked her schedule.",
+            "quote": "Next week if possible. I've already blocked out Friday mornings for this.",
+            "quote_verified": true
+          },
+          {
+            "name": "decision authority",
+            "score": 5,
+            "reason": "The lead explicitly states she runs a one-person studio and makes the decisions alone.",
+            "quote": "It's my decision. I'm a one-person studio.",
+            "quote_verified": true
+          },
+          {
+            "name": "fit with the offer",
+            "score": 5,
+            "reason": "The lead is a solo designer who needs help getting steadier client income.",
+            "quote": "My anchor client ended our contract last month and it was 60% of my design income. I need a real system for finding clients instead of hoping.",
+            "quote_verified": true
+          },
+          {
+            "name": "investment readiness",
+            "score": 5,
+            "reason": "The lead has invested in coaching before and stated clear criteria for success.",
+            "quote": "Two new retainer clients in the next three months would make it clearly worth it.",
+            "quote_verified": true
+          },
+          {
+            "name": "commitment",
+            "score": 5,
+            "reason": "The lead is ready to start immediately and has scheduled time for it.",
+            "quote": "Next week if possible. I've already blocked out Friday mornings for this.",
+            "quote_verified": true
+          }
+        ]
+      },
+      "brief": {
+        "summary_lines": [
+          "Priya is a solo design consultant who just lost an anchor client making up 60 percent of her income.",
+          "She wants to build a reliable client-getting system and replace that revenue instead of relying on hope.",
+          "She is extremely ready, having already blocked out Friday mornings and hoping to start next week."
+        ],
+        "key_quotes": [
+          "My anchor client ended our contract last month and it was 60% of my design income.",
+          "I need a real system for finding clients instead of hoping.",
+          "Two new retainer clients in the next three months would make it clearly worth it."
+        ],
+        "unknowns": [
+          "What specific type of design services she offers and who her ideal clients are",
+          "What outreach methods or templates she has tried on LinkedIn specifically"
+        ],
+        "opening_line": "Hi Priya, I saw you need a real system for finding clients instead of hoping, so let us talk about how to help you secure two new retainer clients."
+      }
+    },
+    {
+      "name": "Ben Lindqvist",
+      "source": "gemini-3.5-flash-lite",
+      "chat_done": true,
+      "call_in_days": -7,
+      "call_at": "11:30",
+      "outcome": "no_show",
+      "messages": [
+        {
+          "role": "ai",
+          "text": "Hi Ben! I'm an AI assistant working with Jordan at Maya Coaching. I'm not a person. I'll ask a few short questions so Jordan can prepare for your call, and you can ask me anything about the program. To start: what made you book a call now?"
+        },
+        {
+          "role": "lead",
+          "text": "Just browsing really. I'm thinking about freelancing someday."
+        },
+        {
+          "role": "ai",
+          "text": "It is great to plan ahead. Since you are looking at freelancing for the future, what is the main problem you want to solve first?"
+        },
+        {
+          "role": "lead",
+          "text": "Nothing yet, I haven't started."
+        },
+        {
+          "role": "ai",
+          "text": "Starting out can raise a lot of questions. Have you tried any resources or courses to help you prepare so far?"
+        },
+        {
+          "role": "lead",
+          "text": "No plans yet."
+        },
+        {
+          "role": "ai",
+          "text": "That makes sense. Jordan will cover everything you need to start on the call. Thank you, Jordan will read a summary before your call."
+        }
+      ],
+      "score": {
+        "enough_information": false,
+        "dimensions": [
+          {
+            "name": "pain",
+            "score": 0,
+            "reason": "The lead states they have not started freelancing yet and have no problems to solve right now.",
+            "quote": "Nothing yet, I haven't started.",
+            "quote_verified": true
+          },
+          {
+            "name": "urgency",
+            "score": 0,
+            "reason": "The lead is only browsing with thoughts of freelancing someday, showing no reason to act immediately.",
+            "quote": "Just browsing really. I'm thinking about freelancing someday.",
+            "quote_verified": true
+          },
+          {
+            "name": "decision authority",
+            "score": 0,
+            "reason": "The lead did not mention their decision authority regarding the program.",
+            "quote": "",
+            "quote_verified": false
+          },
+          {
+            "name": "fit with the offer",
+            "score": 1,
+            "reason": "The lead is thinking about freelancing someday, but the offer is for active freelancers and solo consultants wanting steadier client income.",
+            "quote": "I'm thinking about freelancing someday.",
+            "quote_verified": true
+          },
+          {
+            "name": "investment readiness",
+            "score": 0,
+            "reason": "The lead confirmed they have no plans or investments made so far.",
+            "quote": "No plans yet.",
+            "quote_verified": true
+          },
+          {
+            "name": "commitment",
+            "score": 0,
+            "reason": "The lead shows no commitment to doing the work or starting right now.",
+            "quote": "Nothing yet, I haven't started.",
+            "quote_verified": true
+          }
+        ]
+      },
+      "brief": {
+        "summary_lines": [
+          "Ben is browsing and thinking about freelancing someday.",
+          "He booked now out of curiosity for future planning.",
+          "He has low readiness and has not started yet."
+        ],
+        "key_quotes": [
+          "Just browsing really. I'm thinking about freelancing someday.",
+          "Nothing yet, I haven't started.",
+          "No plans yet."
+        ],
+        "unknowns": [
+          "What kind of freelance work Ben wants to do",
+          "What is holding him back from starting",
+          "What would make getting clients a priority for him"
+        ],
+        "opening_line": "Hi Ben, since you mentioned you are thinking about freelancing someday, what kind of work are you hoping to do?"
+      }
+    },
+    {
+      "name": "Nora Jensen",
+      "source": "gemini-3.5-flash-lite",
+      "chat_done": false,
+      "call_in_days": null,
+      "call_at": null,
+      "outcome": "pending",
+      "messages": [
+        {
+          "role": "ai",
+          "text": "Hi Nora! I'm an AI assistant working with Jordan at Maya Coaching. I'm not a person. I'll ask a few short questions so Jordan can prepare for your call, and you can ask me anything about the program. To start: what made you book a call now?"
+        },
+        {
+          "role": "lead",
+          "text": "I want more clients for my illustration work."
+        },
+        {
+          "role": "ai",
+          "text": "Getting a steady flow of illustration clients is so important. What have you already tried so far to get more clients?"
+        }
+      ],
+      "score": null,
+      "brief": null
+    },
+    {
+      "name": "Leo Park",
+      "source": "gemini-3.5-flash-lite",
+      "chat_done": false,
+      "call_in_days": null,
+      "call_at": null,
+      "outcome": "pending",
+      "messages": [
+        {
+          "role": "ai",
+          "text": "Hi Leo! I'm an AI assistant working with Jordan at Maya Coaching. I'm not a person. I'll ask a few short questions so Jordan can prepare for your call, and you can ask me anything about the program. To start: what made you book a call now?"
+        },
+        {
+          "role": "lead",
+          "text": "Someone sent me this link, what is this exactly?"
+        },
+        {
+          "role": "ai",
+          "text": "It is the 90-Day Momentum Program by Maya Coaching, which helps freelancers and solo consultants get steadier client income. What is the main problem you are hoping to solve?"
+        }
+      ],
+      "score": null,
+      "brief": null
+    },
+    {
+      "name": "Omar Haddad",
+      "source": "gemini-3.5-flash-lite",
+      "chat_done": false,
+      "call_in_days": null,
+      "call_at": null,
+      "outcome": "pending",
+      "messages": [
+        {
+          "role": "ai",
+          "text": "Hi Omar! I'm an AI assistant working with Jordan at Maya Coaching. I'm not a person. I'll ask a few short questions so Jordan can prepare for your call, and you can ask me anything about the program. To start: what made you book a call now?"
+        },
+        {
+          "role": "lead",
+          "text": "My consulting income dropped a lot this year."
+        },
+        {
+          "role": "ai",
+          "text": "I understand how stressful that drop in income can be. What have you already tried to solve this so far?"
+        },
+        {
+          "role": "lead",
+          "text": "I tried a few webinars. How much is it?"
+        },
+        {
+          "role": "ai",
+          "text": "It is $3,000 paid up front, or three monthly payments of $1,100. Who else is part of the decision to join?"
+        }
+      ],
+      "score": null,
+      "brief": null
+    },
+    {
+      "name": "Jess Turner",
+      "source": "gemini-3.5-flash-lite",
+      "chat_done": false,
+      "call_in_days": null,
+      "call_at": null,
+      "outcome": "pending",
+      "messages": [
+        {
+          "role": "ai",
+          "text": "Hi Jess! I'm an AI assistant working with Jordan at Maya Coaching. I'm not a person. I'll ask a few short questions so Jordan can prepare for your call, and you can ask me anything about the program. To start: what made you book a call now?"
+        },
+        {
+          "role": "lead",
+          "text": "Just checking this out before I book anything."
+        },
+        {
+          "role": "ai",
+          "text": "No problem at all! Jordan helps freelancers and solo consultants get steadier client income through the 90-Day Momentum Program. What is the main challenge you are hoping to solve?"
+        }
+      ],
+      "score": null,
+      "brief": null
+    },
+    {
+      "name": "Kai Brooks",
+      "source": "gemini-3.5-flash-lite",
+      "chat_done": false,
+      "call_in_days": null,
+      "call_at": null,
+      "outcome": "pending",
+      "messages": [
+        {
+          "role": "ai",
+          "text": "Hi Kai! I'm an AI assistant working with Jordan at Maya Coaching. I'm not a person. I'll ask a few short questions so Jordan can prepare for your call, and you can ask me anything about the program. To start: what made you book a call now?"
+        },
+        {
+          "role": "lead",
+          "text": "I'm a freelance developer and I want steadier work."
+        },
+        {
+          "role": "ai",
+          "text": "Getting steadier work is a great goal to focus on. What have you already tried to solve this so far?"
+        },
+        {
+          "role": "lead",
+          "text": "Job boards mostly."
+        },
+        {
+          "role": "ai",
+          "text": "Job boards can definitely be tiring. Are you making this decision on your own, or is anyone else involved?"
+        }
+      ],
+      "score": null,
+      "brief": null
+    },
+    {
+      "name": "Ravi Menon",
+      "source": "gemini-3.5-flash-lite",
+      "chat_done": true,
+      "call_in_days": 2,
+      "call_at": "11:30",
+      "outcome": "pending",
+      "messages": [
+        {
+          "role": "ai",
+          "text": "Hi Ravi! I'm an AI assistant working with Jordan at Maya Coaching. I'm not a person. I'll ask a few short questions so Jordan can prepare for your call, and you can ask me anything about the program. To start: what made you book a call now?"
+        },
+        {
+          "role": "lead",
+          "text": "I left my agency job to consult on marketing analytics, and my first contract ends in five weeks with nothing lined up after it."
+        },
+        {
+          "role": "ai",
+          "text": "That is a stressful spot to be in, but congrats on making the leap into consulting. What have you tried so far to find your next clients?"
+        },
+        {
+          "role": "lead",
+          "text": "I've asked former colleagues for introductions and written a few articles. I got two coffee chats, no work yet."
+        },
+        {
+          "role": "ai",
+          "text": "Putting yourself out there with articles and networking is a great start. Who else, if anyone, is involved in deciding to join a program like ours?"
+        },
+        {
+          "role": "lead",
+          "text": "I make the decision myself. How much does the program cost?"
+        },
+        {
+          "role": "ai",
+          "text": "It is great that you are fully in charge of your decisions. The 90-Day Momentum Program is $3,000 paid up front, or three monthly payments of $1,100. What result from this program would make it totally worth it for you?"
+        },
+        {
+          "role": "lead",
+          "text": "One signed contract before the current one ends, and a pipeline so I'm never in this spot again."
+        },
+        {
+          "role": "ai",
+          "text": "Securing that next contract and building a steady pipeline is a great goal. Are you ready to start as soon as possible if it looks like a good fit?"
+        },
+        {
+          "role": "lead",
+          "text": "Within two weeks. I can do evenings and Saturday mornings."
+        },
+        {
+          "role": "ai",
+          "text": "Thanks Ravi, Jordan will read a summary of this before your call."
+        }
+      ],
+      "score": {
+        "enough_information": true,
+        "dimensions": [
+          {
+            "name": "pain",
+            "score": 5,
+            "reason": "The lead faces an immediate end to their only contract in five weeks with nothing lined up.",
+            "quote": "I left my agency job to consult on marketing analytics, and my first contract ends in five weeks with nothing lined up after it.",
+            "quote_verified": true
+          },
+          {
+            "name": "urgency",
+            "score": 5,
+            "reason": "The lead has a hard deadline of five weeks before their current contract finishes.",
+            "quote": "I left my agency job to consult on marketing analytics, and my first contract ends in five weeks with nothing lined up after it.",
+            "quote_verified": true
+          },
+          {
+            "name": "decision authority",
+            "score": 5,
+            "reason": "The lead explicitly stated they make the decision by themselves.",
+            "quote": "I make the decision myself.",
+            "quote_verified": true
+          },
+          {
+            "name": "fit with the offer",
+            "score": 5,
+            "reason": "The lead is a solo consultant who needs steadier client income.",
+            "quote": "One signed contract before the current one ends, and a pipeline so I'm never in this spot again.",
+            "quote_verified": true
+          },
+          {
+            "name": "investment readiness",
+            "score": 4,
+            "reason": "The lead stated clear outcomes that would make the program worth it.",
+            "quote": "One signed contract before the current one ends, and a pipeline so I'm never in this spot again.",
+            "quote_verified": true
+          },
+          {
+            "name": "commitment",
+            "score": 5,
+            "reason": "The lead is ready to start within two weeks and is willing to work on evenings and Saturday mornings.",
+            "quote": "Within two weeks. I can do evenings and Saturday mornings.",
+            "quote_verified": true
+          }
+        ]
+      },
+      "brief": {
+        "summary_lines": [
+          "Ravi is a new marketing analytics consultant whose first contract ends in five weeks with nothing lined up next.",
+          "He booked now because he needs to secure a new contract quickly and wants to build a steady pipeline so he is never in this spot again.",
+          "He is very ready to start within two weeks and is the sole decision-maker for joining the program."
+        ],
+        "key_quotes": [
+          "I left my agency job to consult on marketing analytics, and my first contract ends in five weeks with nothing lined up after it.",
+          "I've asked former colleagues for introductions and written a few articles. I got two coffee chats, no work yet.",
+          "One signed contract before the current one ends, and a pipeline so I'm never in this spot again."
+        ],
+        "unknowns": [
+          "What specific types of clients or industries Ravi is targeting for his marketing analytics consulting",
+          "What previous methods he has used to market his services before leaving his agency job",
+          "What he has invested in solving his client acquisition challenges before"
+        ],
+        "opening_line": "Hi Ravi, I saw you left your agency job to consult on marketing analytics and you want to secure that next contract before your current one ends."
+      }
+    },
+    {
+      "name": "Marcus Bell",
+      "source": "gemini-3.5-flash-lite",
+      "chat_done": true,
+      "call_in_days": -2,
+      "call_at": "14:00",
+      "outcome": "closed",
+      "messages": [
+        {
+          "role": "ai",
+          "text": "Hi Marcus! I'm an AI assistant working with Jordan at Maya Coaching. I'm not a person. I'll ask a few short questions so Jordan can prepare for your call, and you can ask me anything about the program. To start: what made you book a call now?"
+        },
+        {
+          "role": "lead",
+          "text": "I went independent as an IT consultant in January and I have about two months of runway left. I need paying clients fast."
+        },
+        {
+          "role": "ai",
+          "text": "That is a stressful runway, but Jordan can certainly help you get steady clients. What have you already tried so far to find new clients?"
+        },
+        {
+          "role": "lead",
+          "text": "Cold emails, around 200 of them, and I paid for a lead list that went nowhere. I got one small project out of all that."
+        },
+        {
+          "role": "ai",
+          "text": "That is a lot of effort for very little return, but Jordan has some great outreach templates to help with that. Is there anyone else helping you make decisions about your business, or are you the sole decision maker?"
+        },
+        {
+          "role": "lead",
+          "text": "Just me, I make the calls for my business."
+        },
+        {
+          "role": "ai",
+          "text": "Got it, being the sole decision maker definitely speeds things up. What result from the 90-Day Momentum Program would make this entirely worth it for you?"
+        },
+        {
+          "role": "lead",
+          "text": "If I could sign three clients on monthly support contracts I'd be stable. That is the whole goal."
+        },
+        {
+          "role": "ai",
+          "text": "Securing those three monthly contracts would be a huge win for your stability. Are you ready to dive right into the program as soon as next week if it feels like the right fit?"
+        },
+        {
+          "role": "lead",
+          "text": "Immediately. I can give this ten hours a week right now."
+        },
+        {
+          "role": "ai",
+          "text": "Thank you for sharing all of that, Marcus. Jordan will read a summary before the call."
+        }
+      ],
+      "score": {
+        "enough_information": true,
+        "dimensions": [
+          {
+            "name": "pain",
+            "score": 5,
+            "reason": "The lead has only two months of financial runway left and an urgent need for paying clients.",
+            "quote": "I went independent as an IT consultant in January and I have about two months of runway left. I need paying clients fast.",
+            "quote_verified": true
+          },
+          {
+            "name": "urgency",
+            "score": 5,
+            "reason": "The lead has a very short runway and wants to start immediately.",
+            "quote": "Immediately. I can give this ten hours a week right now.",
+            "quote_verified": true
+          },
+          {
+            "name": "decision authority",
+            "score": 5,
+            "reason": "The lead explicitly states they are the sole decision maker for the business.",
+            "quote": "Just me, I make the calls for my business.",
+            "quote_verified": true
+          },
+          {
+            "name": "fit with the offer",
+            "score": 5,
+            "reason": "The lead is a solo consultant looking for steady client income through monthly contracts.",
+            "quote": "If I could sign three clients on monthly support contracts I'd be stable. That is the whole goal.",
+            "quote_verified": true
+          },
+          {
+            "name": "investment readiness",
+            "score": 4,
+            "reason": "The lead has already invested money in a lead list and defined the specific client goal that makes the program worth it.",
+            "quote": "Cold emails, around 200 of them, and I paid for a lead list that went nowhere. I got one small project out of all that.",
+            "quote_verified": true
+          },
+          {
+            "name": "commitment",
+            "score": 5,
+            "reason": "The lead is ready to start immediately and commit ten hours a week.",
+            "quote": "Immediately. I can give this ten hours a week right now.",
+            "quote_verified": true
+          }
+        ]
+      },
+      "brief": {
+        "summary_lines": [
+          "Marcus is an independent IT consultant who went out on his own in January and needs paying clients fast.",
+          "He has about two months of runway left and wants to secure steady income quickly.",
+          "He is fully ready to start immediately and can commit ten hours a week to the program."
+        ],
+        "key_quotes": [
+          "I need paying clients fast.",
+          "Just me, I make the calls for my business.",
+          "If I could sign three clients on monthly support contracts I'd be stable.",
+          "Immediately. I can give this ten hours a week right now."
+        ],
+        "unknowns": [
+          "What specific type of IT services he offers to businesses",
+          "What his usual approach has been when reaching out to cold prospects",
+          "What he has invested in solving client acquisition before"
+        ],
+        "opening_line": "Hi Marcus, I saw you need paying clients fast with a couple of months of runway left, so let us talk about how to get you those three monthly support contracts."
+      }
+    },
+    {
+      "name": "Hannah Weiss",
+      "source": "gemini-3.5-flash-lite",
+      "chat_done": true,
+      "call_in_days": -3,
+      "call_at": "11:30",
+      "outcome": "closed",
+      "messages": [
+        {
+          "role": "ai",
+          "text": "Hi Hannah! I'm an AI assistant working with Jordan at Maya Coaching. I'm not a person. I'll ask a few short questions so Jordan can prepare for your call, and you can ask me anything about the program. To start: what made you book a call now?"
+        },
+        {
+          "role": "lead",
+          "text": "My bookkeeping practice has been stuck at the same six clients for a year. I want to grow but I don't know what to do differently."
+        },
+        {
+          "role": "ai",
+          "text": "Getting stuck at the same client level is frustrating. What have you already tried to find new clients so far?"
+        },
+        {
+          "role": "lead",
+          "text": "I joined a networking group and I redid my website last spring. The website looks nice but nobody finds it."
+        },
+        {
+          "role": "ai",
+          "text": "Redoing a website and joining a networking group takes a lot of effort. When you and Jordan talk, is anyone else helping you make the final decision on joining the program?"
+        },
+        {
+          "role": "lead",
+          "text": "I decide on my own, although I usually talk big purchases through with my husband first."
+        },
+        {
+          "role": "ai",
+          "text": "It is great that you have full decision power. What specific result from the program would make this completely worth it for you?"
+        },
+        {
+          "role": "lead",
+          "text": "Getting to ten clients by the summer. How long is the program?"
+        },
+        {
+          "role": "ai",
+          "text": "It is 90 days, or 12 weeks, long. How ready are you to get started once you and Jordan find the right plan?"
+        },
+        {
+          "role": "lead",
+          "text": "I could start at the beginning of next month, once tax season calms down."
+        },
+        {
+          "role": "ai",
+          "text": "Starting next month sounds like a great timeline. Thank you for sharing all of this, Hannah; Jordan will read a summary before the call."
+        }
+      ],
+      "score": {
+        "enough_information": true,
+        "dimensions": [
+          {
+            "name": "pain",
+            "score": 4,
+            "reason": "The lead clearly states her bookkeeping practice has been stuck at the same client level for a year.",
+            "quote": "My bookkeeping practice has been stuck at the same six clients for a year.",
+            "quote_verified": true
+          },
+          {
+            "name": "urgency",
+            "score": 3,
+            "reason": "The lead wants to grow and has a specific timeline in mind to reach her goal.",
+            "quote": "Getting to ten clients by the summer.",
+            "quote_verified": true
+          },
+          {
+            "name": "decision authority",
+            "score": 4,
+            "reason": "The lead confirms she makes the final decision on her own.",
+            "quote": "I decide on my own, although I usually talk big purchases through with my husband first.",
+            "quote_verified": true
+          },
+          {
+            "name": "fit with the offer",
+            "score": 5,
+            "reason": "As a solo business owner stuck at the same client level, she matches the exact target audience for the program.",
+            "quote": "My bookkeeping practice has been stuck at the same six clients for a year. I want to grow but I don't know what to do differently.",
+            "quote_verified": true
+          },
+          {
+            "name": "investment readiness",
+            "score": 4,
+            "reason": "The lead has previously invested time and money into a networking group and a website redesign.",
+            "quote": "I joined a networking group and I redid my website last spring.",
+            "quote_verified": true
+          },
+          {
+            "name": "commitment",
+            "score": 4,
+            "reason": "The lead indicates readiness to start as soon as tax season calms down.",
+            "quote": "I could start at the beginning of next month, once tax season calms down.",
+            "quote_verified": true
+          }
+        ]
+      },
+      "brief": {
+        "summary_lines": [
+          "Hannah is a solo bookkeeper stuck at six clients for a year who wants to reach ten clients by summer.",
+          "She booked now because her website is not bringing in clients and networking has not yielded growth.",
+          "She has decision authority and wants to start at the beginning of next month after tax season."
+        ],
+        "key_quotes": [
+          "My bookkeeping practice has been stuck at the same six clients for a year.",
+          "The website looks nice but nobody finds it.",
+          "Getting to ten clients by the summer."
+        ],
+        "unknowns": [
+          "What specific types of businesses Hannah wants to target as bookkeeping clients",
+          "What she has previously invested in solving her client acquisition problem",
+          "What her current outreach methods look like beyond the website and networking group"
+        ],
+        "opening_line": "Hi Hannah, I saw you want to get your bookkeeping practice to ten clients by the summer, so let us talk about how to make that happen."
+      }
+    },
+    {
+      "name": "Elena Kowalski",
+      "source": "gemini-3.5-flash-lite",
+      "chat_done": true,
+      "call_in_days": -3,
+      "call_at": "15:30",
+      "outcome": "not_closed",
+      "messages": [
+        {
+          "role": "ai",
+          "text": "Hi Elena! I'm an AI assistant working with Jordan at Maya Coaching. I'm not a person. I'll ask a few short questions so Jordan can prepare for your call, and you can ask me anything about the program. To start: what made you book a call now?"
+        },
+        {
+          "role": "lead",
+          "text": "I'm a freelance copywriter and my income is fine, but it has been flat for two years and I'm getting bored of chasing one-off jobs."
+        },
+        {
+          "role": "ai",
+          "text": "It makes total sense to want more stability and better projects than just chasing one-off jobs. What have you already tried to fix this?"
+        },
+        {
+          "role": "lead",
+          "text": "Mostly word of mouth. I read a couple of books about pricing but didn't change much."
+        },
+        {
+          "role": "ai",
+          "text": "Relying on word of mouth gets exhausting. Are you the only one deciding on joining a program like this, or is anyone else involved?"
+        },
+        {
+          "role": "lead",
+          "text": "My partner and I share finances, so I would want to discuss it with her before committing to anything."
+        },
+        {
+          "role": "ai",
+          "text": "That makes complete sense. To make sure Jordan helps you best, what result would make this worth it for you?"
+        },
+        {
+          "role": "lead",
+          "text": "I suppose moving from one-off jobs to a few monthly retainers. I'm not sure what number would feel worth it yet."
+        },
+        {
+          "role": "ai",
+          "text": "Getting a few monthly retainers locked down would be a massive shift for your business. How ready are you to start once you and your partner discuss it?"
+        },
+        {
+          "role": "lead",
+          "text": "Maybe next month or the one after. There is no rush on my side."
+        },
+        {
+          "role": "ai",
+          "text": "Thanks so much for sharing that, Elena. Jordan will read a summary of this before your call and you can dive right in."
+        }
+      ],
+      "score": {
+        "enough_information": true,
+        "dimensions": [
+          {
+            "name": "pain",
+            "score": 3,
+            "reason": "The lead is experiencing flat income for two years and fatigue from chasing one-off jobs.",
+            "quote": "I'm a freelance copywriter and my income is fine, but it has been flat for two years and I'm getting bored of chasing one-off jobs.",
+            "quote_verified": true
+          },
+          {
+            "name": "urgency",
+            "score": 1,
+            "reason": "The lead explicitly stated that there is no rush on their side.",
+            "quote": "There is no rush on my side.",
+            "quote_verified": true
+          },
+          {
+            "name": "decision authority",
+            "score": 2,
+            "reason": "The lead needs to discuss the decision with their partner since they share finances.",
+            "quote": "My partner and I share finances, so I would want to discuss it with her before committing to anything.",
+            "quote_verified": true
+          },
+          {
+            "name": "fit with the offer",
+            "score": 5,
+            "reason": "The lead is a freelancer wanting steadier client income, which matches the target audience for the program.",
+            "quote": "I'm a freelance copywriter and my income is fine, but it has been flat for two years and I'm getting bored of chasing one-off jobs.",
+            "quote_verified": true
+          },
+          {
+            "name": "investment readiness",
+            "score": 2,
+            "reason": "The lead has read books about pricing and wants monthly retainers, but has not yet defined a specific worth threshold.",
+            "quote": "I suppose moving from one-off jobs to a few monthly retainers. I'm not sure what number would feel worth it yet.",
+            "quote_verified": true
+          },
+          {
+            "name": "commitment",
+            "score": 2,
+            "reason": "The lead is looking at starting next month or the one after, showing low immediate readiness to begin.",
+            "quote": "Maybe next month or the one after.",
+            "quote_verified": true
+          }
+        ]
+      },
+      "brief": {
+        "summary_lines": [
+          "Elena is a freelance copywriter whose income has been flat for two years and wants to move from one-off jobs to monthly retainers.",
+          "She booked the call now because she is getting bored of chasing one-off jobs and relying solely on word of mouth.",
+          "She is at a low urgency level, planning to start in a month or two after discussing it with her partner."
+        ],
+        "key_quotes": [
+          "I'm a freelance copywriter and my income is fine, but it has been flat for two years and I'm getting bored of chasing one-off jobs.",
+          "Mostly word of mouth. I read a couple of books about pricing but didn't change much."
+        ],
+        "unknowns": [
+          "What specific monthly retainer target Elena wants to hit",
+          "What her partner's thoughts are on investing in a program like this",
+          "What specific types of clients or projects she wants to attract"
+        ],
+        "opening_line": "Hi Elena, I read that you are a freelance copywriter and you are ready to move away from chasing one-off jobs into getting a few monthly retainers locked down."
+      }
+    },
+    {
+      "name": "Aisha Karim",
+      "source": "gemini-3.5-flash-lite",
+      "chat_done": true,
+      "call_in_days": -5,
+      "call_at": "10:00",
+      "outcome": "not_closed",
+      "messages": [
+        {
+          "role": "ai",
+          "text": "Hi Aisha! I'm an AI assistant working with Jordan at Maya Coaching. I'm not a person. I'll ask a few short questions so Jordan can prepare for your call, and you can ask me anything about the program. To start: what made you book a call now?"
+        },
+        {
+          "role": "lead",
+          "text": "A friend recommended Maya Coaching. My translation business is okay, I'm mostly curious what coaching could add."
+        },
+        {
+          "role": "ai",
+          "text": "Thanks for sharing that! What have you already tried on your own to grow your translation business before this?"
+        },
+        {
+          "role": "lead",
+          "text": "Nothing really, clients have always just come through an agency I work with."
+        },
+        {
+          "role": "ai",
+          "text": "That makes sense. What is the main result you would want from the program to make it totally worth it for you?"
+        },
+        {
+          "role": "lead",
+          "text": "Honestly I don't know. Maybe having direct clients instead of going through the agency."
+        },
+        {
+          "role": "ai",
+          "text": "Getting direct clients would be a great shift. Are you the only one deciding on this, or is anyone else involved?"
+        },
+        {
+          "role": "lead",
+          "text": "I run it with a business partner and she handles the money side, so she would have the final say."
+        },
+        {
+          "role": "ai",
+          "text": "Thanks for letting me know. Thanks so much for chatting with me today, Aisha. Jordan will read a summary of our chat before your call."
+        }
+      ],
+      "score": {
+        "enough_information": true,
+        "dimensions": [
+          {
+            "name": "pain",
+            "score": 1,
+            "reason": "The lead states her translation business is okay and she is only mostly curious about coaching.",
+            "quote": "My translation business is okay, I'm mostly curious what coaching could add.",
+            "quote_verified": true
+          },
+          {
+            "name": "urgency",
+            "score": 1,
+            "reason": "The lead booked a call simply because a friend recommended Maya Coaching.",
+            "quote": "A friend recommended Maya Coaching.",
+            "quote_verified": true
+          },
+          {
+            "name": "decision authority",
+            "score": 2,
+            "reason": "The lead runs the business with a partner who has the final say.",
+            "quote": "I run it with a business partner and she handles the money side, so she would have the final say.",
+            "quote_verified": true
+          },
+          {
+            "name": "fit with the offer",
+            "score": 4,
+            "reason": "As a solo business owner wanting direct clients, she fits the target profile for the program.",
+            "quote": "Maybe having direct clients instead of going through the agency.",
+            "quote_verified": true
+          },
+          {
+            "name": "investment readiness",
+            "score": 1,
+            "reason": "The lead has not tried anything on her own and is unsure what would make the program worth it.",
+            "quote": "Honestly I don't know.",
+            "quote_verified": true
+          },
+          {
+            "name": "commitment",
+            "score": 2,
+            "reason": "The lead shows mild curiosity but has no clear goals yet.",
+            "quote": "My translation business is okay, I'm mostly curious what coaching could add.",
+            "quote_verified": true
+          }
+        ]
+      },
+      "brief": {
+        "summary_lines": [
+          "Aisha runs a translation business and wants to explore adding direct clients instead of relying on an agency.",
+          "She booked the call now because a friend recommended Maya Coaching.",
+          "She has low urgency and shares decision authority with a business partner who handles the money side."
+        ],
+        "key_quotes": [
+          "A friend recommended Maya Coaching.",
+          "My translation business is okay, I'm mostly curious what coaching could add.",
+          "Nothing really, clients have always just come through an agency I work with.",
+          "Honestly I don't know. Maybe having direct clients instead of going through the agency."
+        ],
+        "unknowns": [
+          "What specific type of translation services she wants to offer directly to clients",
+          "What her business partner's thoughts are on investing in a program like this",
+          "What her exact timeline or goals are for bringing on direct clients"
+        ],
+        "opening_line": "Hi Aisha, since a friend recommended Maya Coaching and you are curious what coaching could add for your translation business, let's look at what bringing on direct clients instead of relying on an agency could mean for you."
+      }
+    },
+    {
+      "name": "Diego Santos",
+      "source": "gemini-3.5-flash-lite",
+      "chat_done": true,
+      "call_in_days": -6,
+      "call_at": "14:00",
+      "outcome": "no_show",
+      "messages": [
+        {
+          "role": "ai",
+          "text": "Hi Diego! I'm an AI assistant working with Jordan at Maya Coaching. I'm not a person. I'll ask a few short questions so Jordan can prepare for your call, and you can ask me anything about the program. To start: what made you book a call now?"
+        },
+        {
+          "role": "lead",
+          "text": "I saw an ad and thought I'd take a look. I do some freelance video editing on the side of my job."
+        },
+        {
+          "role": "ai",
+          "text": "Thanks for sharing that, Diego. What is the main problem with your freelance video editing work that you want to solve right now?"
+        },
+        {
+          "role": "lead",
+          "text": "Not much. I have a profile on a freelancer site."
+        },
+        {
+          "role": "ai",
+          "text": "Got it. Have you invested in any programs or courses to help you find clients before this?"
+        },
+        {
+          "role": "lead",
+          "text": "It would be up to me."
+        },
+        {
+          "role": "ai",
+          "text": "That makes sense, Diego. What result from the 90-Day Momentum Program would make this completely worth it for you?"
+        },
+        {
+          "role": "lead",
+          "text": "More side income I guess. I haven't thought about a number."
+        },
+        {
+          "role": "ai",
+          "text": "Thanks for sharing that, Diego. Jordan will read a summary before your call and can help you map all of that out."
+        }
+      ],
+      "score": {
+        "enough_information": true,
+        "dimensions": [
+          {
+            "name": "pain",
+            "score": 1,
+            "reason": "The lead states there is not much of a problem with their work.",
+            "quote": "Not much.",
+            "quote_verified": true
+          },
+          {
+            "name": "urgency",
+            "score": 1,
+            "reason": "The lead only looked at an ad out of curiosity rather than facing a pressing issue.",
+            "quote": "I saw an ad and thought I'd take a look.",
+            "quote_verified": true
+          },
+          {
+            "name": "decision authority",
+            "score": 4,
+            "reason": "The lead confirms they make their own decisions.",
+            "quote": "It would be up to me.",
+            "quote_verified": true
+          },
+          {
+            "name": "fit with the offer",
+            "score": 2,
+            "reason": "The lead does freelance work on the side, which aligns loosely with the target audience.",
+            "quote": "I do some freelance video editing on the side of my job.",
+            "quote_verified": true
+          },
+          {
+            "name": "investment readiness",
+            "score": 1,
+            "reason": "The lead wants more side income but has not thought about specific goals or worth.",
+            "quote": "More side income I guess. I haven't thought about a number.",
+            "quote_verified": true
+          },
+          {
+            "name": "commitment",
+            "score": 1,
+            "reason": "The lead shows very passive interest without clear intent to do the work.",
+            "quote": "I saw an ad and thought I'd take a look.",
+            "quote_verified": true
+          }
+        ]
+      },
+      "brief": {
+        "summary_lines": [
+          "Diego does freelance video editing on the side of his job and wants more side income.",
+          "He saw an ad and decided to take a look, though he has not thought about a specific number or goal yet.",
+          "His urgency and readiness are low, with no clear pain points shared."
+        ],
+        "key_quotes": [
+          "I saw an ad and thought I'd take a look.",
+          "I do some freelance video editing on the side of my job.",
+          "More side income I guess. I haven't thought about a number."
+        ],
+        "unknowns": [
+          "How many clients Diego currently has",
+          "What steps he is actively taking to find work",
+          "Whether he wants to transition from his job to full-time freelancing"
+        ],
+        "opening_line": "Hi Diego, I saw you do some freelance video editing on the side of your job and are looking for more side income, so let us talk about how to map that out."
+      }
+    }
+  ]
+}

@@ -59,8 +59,15 @@ def test_bands():
 def test_missing_dimensions_are_filled_with_zero_in_the_fixed_order():
     only_one = [DimensionScore(name="Urgency", score=4, reason="r", quote="")]
     tidy = engine.tidy_dimensions(only_one)
-    assert [d.name for d in tidy][:2] == ["pain", "Urgency"]
+    assert [d.name for d in tidy][:2] == ["pain", "urgency"]
     assert tidy[0].score == 0 and tidy[1].score == 4 and len(tidy) == 6
+
+
+def test_dimension_names_written_with_underscores_still_match():
+    odd_names = [DimensionScore(name="Decision_Authority", score=5, reason="r", quote=""),
+                 DimensionScore(name="fit-with-the-offer", score=3, reason="r", quote="")]
+    tidy = {d.name: d.score for d in engine.tidy_dimensions(odd_names)}
+    assert tidy["decision authority"] == 5 and tidy["fit with the offer"] == 3
 
 
 def test_opening_message_says_it_is_an_ai():

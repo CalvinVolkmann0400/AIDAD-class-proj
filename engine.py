@@ -19,7 +19,8 @@ GUARDRAILS = """Rules you must always follow:
 - Never ask about income, salary, savings, debt, credit or whether the lead can afford it.
   Talk about money only as "have you invested in solving this before" or "what would make this worth it".
 - Never ask about or use age, gender, race, religion, health, disability, family status or nationality.
-- Use only what is written in the conversation and in the offer. Never invent facts, prices or promises.
+- Use only what is written in the conversation and in the offer. Never invent facts or prices.
+- Never promise or guarantee results, and never say the program will work for the lead.
 - Write plain text with no markdown."""
 
 
@@ -115,10 +116,19 @@ THE OFFER:
 
 
 def tidy_dimensions(found: list[DimensionScore]) -> list[DimensionScore]:
-    """Put the six dimensions in our fixed order; any the AI left out gets an honest 0."""
-    by_name = {d.name.strip().lower(): d for d in found}
-    missing = "The AI did not score this dimension."
-    return [by_name.get(name) or DimensionScore(name=name, score=0, reason=missing, quote="") for name in DIMENSIONS]
+    """Put the six dimensions in our fixed order; any the AI left out gets an honest 0.
+
+    The AI sometimes writes a name slightly differently ("decision_authority" for
+    "decision authority"), so names are compared with spaces, dashes and underscores evened out.
+    """
+    by_name = {re.sub(r"[\s_-]+", " ", d.name).strip().lower(): d for d in found}
+    tidy = []
+    for name in DIMENSIONS:
+        missing = DimensionScore(name=name, score=0, reason="The AI did not score this dimension.", quote="")
+        dimension = by_name.get(name) or missing
+        dimension.name = name  # always store our own spelling
+        tidy.append(dimension)
+    return tidy
 
 
 def _simplify(text: str) -> str:

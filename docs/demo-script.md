@@ -1,8 +1,9 @@
 # Two-minute live demo script
 
-The path: **type two answers live → Replay → Score → Brief → Offer file.**
-Typing two answers shows the AI really choosing its questions. Replay then shows a finished
-run without waiting, so the demo cannot stall.
+The path: **start screen → lead chat (two answers, live) → closer dashboard → one lead's brief → owner funnel.**
+
+Typing two answers shows the AI really choosing its questions. Everything after that reads
+saved leads from the database, so it cannot stall.
 
 ## Before class (five minutes)
 
@@ -12,28 +13,28 @@ run without waiting, so the demo cannot stall.
    uv run streamlit run app.py
    ```
 
-2. The browser opens at `http://localhost:8501`. Check the sidebar badge:
-   - green **Live AI** = the key works and the AI is live
-   - orange **Practice mode** = no key found (Replay still works; skip the live typing)
-3. Click **Test the AI connection** in the sidebar. "success" means the live part is safe to try.
-4. Click **Replay saved run** once to confirm it loads, then **New conversation** to reset.
+2. The browser opens at `http://localhost:8501` on the **start screen** with three cards: Lead, Closer, Owner.
+3. Click **Continue as the owner**, open **Settings**, and click **Test the AI connection**.
+   - "success" means the live chat is safe to try.
+   - If it fails or takes more than about 10 seconds, skip Step 1 below and start at Step 2.
+4. Click **Switch role** in the sidebar to get back to the start screen.
 5. Make the browser text bigger (Ctrl and +) so the back row can read it.
-6. Leave the app on the **Lead chat** page with a fresh conversation.
-
-Do not refresh the browser (F5) during the demo. A refresh starts a new conversation.
 
 ## The demo
 
-### Step 1 — the chat, live (about 45 seconds)
+### Step 1 — the lead's view, live (about 45 seconds)
 
-**Say:** "This is what the lead sees. Notice the first message says it's an AI, not a person."
+On the start screen click **Open the lead's chat link**.
 
-Type this as the lead and press Enter:
+**Say:** "This is all a lead ever sees: one chat, no menu. Notice the first message says it's an AI."
+
+Type a name (for example `Alex Morgan`) and click **Start the chat**. Click in the reply box
+before typing each answer (it loses focus while the AI is replying). Then type:
 
 > I lost two big clients this spring and my income has been up and down ever since.
 
-Wait for the reply (the spinner says "AI is thinking"). In testing a reply usually took 5 to 10
-seconds, and once about 25 seconds. Keep talking while it thinks.
+Wait for the reply (the spinner says "AI is thinking"). Replies usually take 2 to 5 seconds.
+Keep talking while it thinks.
 
 **Say:** "I didn't script that question. The AI chose it from what I just said."
 
@@ -41,63 +42,59 @@ Type the second answer, which includes a question back to the AI:
 
 > I tried an online course last year but never finished it. How much does your program cost?
 
-**Say:** "Now I asked it a question. It may only answer from the offer file, so the price it
-gives is the one in the file, and then it carries on with its own questions."
+**Say:** "It may only answer from the offer file, so the price is the one in the file. When the
+chat ends, the lead gets a call time, and the AI scores the chat and writes a brief for the closer."
 
-### Step 2 — switch to the saved run (about 10 seconds)
+### Step 2 — the closer's view (about 40 seconds)
 
-Click **Replay saved run** in the sidebar.
+Open a **new browser tab** at `http://localhost:8501` and click **Continue as Jordan**.
 
-**Say:** "To save time I'll load a full conversation the same AI produced earlier. The blue
-banner says it's a saved run." Scroll the chat once so they see it is a whole conversation.
-Point at the refund question: the offer file says nothing about refunds, so the AI answered
-"Jordan will cover refund policies directly with you on the call" instead of inventing a policy.
+**Say:** "This is Jordan, the closer. Numbers at the top, then today's and upcoming calls. Each
+call has the lead's score and one line about them."
 
-### Step 3 — the score (about 30 seconds)
+Click **Brief** on **Sam Rivera**.
 
-Click **Score** in the sidebar.
+**Say:** "This is what Jordan reads a minute before the call: three lines of summary, the lead's
+own words, what's still unknown, and a suggested opening line. The AI gave six scores with a
+quote for each, and my code checked every quote really appears in the chat."
 
-**Say:** "The AI scores six things from zero to five and has to give a reason and a quote for
-each. My code then checks every quote really appears in what the lead typed. That's the green
-tick. The total out of 100 and the band are plain Python, not the AI."
+(If you have time: click **Score** to show the six cards with the green ticks.)
 
-Point at one card: the score, the reason, the quote.
+### Step 3 — the owner's view (about 35 seconds)
 
-### Step 4 — the closer's brief (about 25 seconds)
+Click **Switch role**, then **Continue as the owner**.
 
-Click **Closer's brief** in the sidebar.
+**Say:** "And this is the owner. The funnel goes level by level: who clicked the link, who started
+the chat, who finished, who showed up to the call, who bought. The app marks the biggest leak."
 
-**Say:** "This is what Jordan, the closer, reads one minute before the call: three lines of
-summary, the lead's own words, what's still unknown, and a suggested opening line. The score
-sits beside it."
+Point at the yellow **Biggest leak** box, then scroll to **Results by score band**.
 
-### Step 5 — the offer file (about 10 seconds, skip if short on time)
-
-Click **Offer file**.
-
-**Say:** "And this is the only thing the AI is allowed to answer from. Change the price here
-and the AI's answer changes."
+**Say:** "This last table is the honest test of the idea: do higher scores show up and close more?
+Right now it's sample data, so it's an illustration. Collecting real results is my next step."
 
 ## If something goes wrong
 
 | What you see | What to do | What to say |
 |---|---|---|
-| The spinner runs longer than about 15 seconds | Click **Replay saved run** straight away | "The free AI tier is busy, so here is a saved run from the same AI." |
-| A red box: "The AI could not finish this step" | Click **Try again** once; if it fails again, click **Replay saved run** | "This is the failure handling: it tells me honestly instead of making something up." |
-| Orange **Practice mode** badge at the start | Skip Step 1's typing. Start at Step 2 (Replay) | "I'll show a saved run from the real AI." |
-| The app will not start at all | Use the screenshots in `docs/screenshots/` on the slides | "Here are screenshots from this morning's run." |
-| You clicked **New conversation** by accident | Click **Replay saved run** | (nothing; keep going) |
+| The spinner runs longer than about 10 seconds | Leave that tab, go to Step 2 | "The free AI tier is busy, so let me show what the closer sees for leads who already finished." |
+| A red box: "The AI could not finish this step" | Click **Try again** once; if it fails again, go to Step 2 | "This is the failure handling: it tells me honestly instead of making something up." |
+| Orange **Practice mode** banner | Skip Step 1's typing; start at Step 2 | "I'll show leads that already went through the real AI." |
+| The app will not start at all | Use the screenshots in `docs/screenshots/` on the slides | "Here are screenshots from last night's run." |
 
 A red error box is not a disaster. It is one of the features: a time limit, three tries, and an
 honest message.
 
-## Shortcut link
+## Good to know
 
-Opening `http://localhost:8501/?replay=1` loads the saved run immediately. Keep it in a second
-browser tab as the emergency backup.
+- The free AI tier allows only a limited number of requests a day. One practice chat is fine; do not run five in a row right before class.
+
+- The closer and owner pages never call the AI, so Steps 2 and 3 always work.
+- Refreshing a closer or owner page sends you back to the start screen (there is no real sign-in). Just pick the role again.
+- The lead's chat survives a refresh, because its link contains that lead's personal code.
+- Dashboards say "Includes sample data" at the top. If asked: the sample leads' chats, scores and briefs came from the real AI; their call results are invented.
 
 ## Rehearse
 
 - Run the whole path twice with a timer. Aim for two minutes.
-- Practise the two sentences in Step 3. They are the most important part of the demo.
-- Practise the "AI is busy" switch to Replay once, so it feels normal.
+- Practise the two sentences about the quote check in Step 2. They are the most important part.
+- Practise skipping Step 1 once, so it feels normal if the AI is slow.
