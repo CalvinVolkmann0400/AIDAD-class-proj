@@ -74,12 +74,19 @@ class Brief(BaseModel):
     opening_line: str = Field(description="A suggested first sentence for the call.")
 
 
-class SavedRun(BaseModel):
-    """One whole run: the conversation plus (when ready) its score and brief."""
+class Lead(BaseModel):
+    """One lead: who they are, their chat, and (when ready) the score, brief and call outcome."""
 
-    lead_name: str
-    created_at: str
-    source: str  # which AI produced it, for example "gemini-3.6-flash" or "practice"
+    id: int | None = None  # the row number in the database (None until first saved)
+    token: str  # the random code in this lead's personal chat link
+    name: str
+    created_at: str  # when they opened the chat, "YYYY-MM-DD HH:MM"
+    source: str  # which AI ran the chat, for example "gemini-3.6-flash" or "practice"
+    call_time: str  # when the sales call is booked, "YYYY-MM-DD HH:MM"
     messages: list[Message]
+    chat_done: bool = False
     score: ScoreResult | None = None
     brief: Brief | None = None
+    # pending = no result recorded yet; the other three are set by the closer after the call
+    outcome: Literal["pending", "closed", "not_closed", "no_show"] = "pending"
+    is_sample: bool = False  # True for the invented sample leads that fill the dashboards
