@@ -96,6 +96,7 @@ def ask_ai(system: str, prompt: str, answer_shape: type[BaseModel], client=None,
             if not _is_temporary(error):
                 raise AIError(f"The AI service refused the request: {_describe(error)}") from error
             problem = "the service was busy or too slow"
+        print(f"[AI] try {attempt} of {MAX_ATTEMPTS} with {model} failed: {problem}")  # shows in the terminal
         if attempt < MAX_ATTEMPTS:
             sleep(WAIT_SECONDS[attempt - 1])
     raise AIError(

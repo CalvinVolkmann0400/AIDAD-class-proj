@@ -18,8 +18,8 @@ def show_mode_banner() -> None:
     run = st.session_state.run
     if st.session_state.is_replay:
         st.info(
-            f"A real conversation, score and brief that the AI ({run.source}) produced earlier, "
-            f"on {run.created_at}. Nothing on this screen is being generated right now.",
+            f"A real conversation, score and brief that Google Gemini (main model: {run.source}) produced "
+            f"earlier, on {run.created_at}. Nothing on this screen is being generated right now.",
             title="Saved run (replay)", icon=":material/history:",
         )
     elif run.source == "practice":

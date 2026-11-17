@@ -26,7 +26,8 @@ An honest list. "Built" means it works today in this repo.
 | **No outcomes tracking.** Nothing records whether the lead showed up or bought. | Without outcomes we cannot tell if a high score really means a good lead. | Medium |
 | **The score is not validated.** The six dimensions and the bands are my own design. | The numbers look precise but have not been checked against real results. | Ongoing |
 | **Refreshing the browser starts a new chat.** The current conversation lives in the browser tab's memory. | Easy to lose a chat by accident. | Small |
-| **Only tested with one invented lead.** | Rude, confused or very short leads may get odd questions. | Small |
+| **Only tested with one invented lead.** One full real-AI run (Sam Rivera, score 90). | Rude, confused or very short leads may get odd questions, and I have not seen a low score from the real AI yet. | Small |
+| **Evidence quotes are long.** The AI tends to copy the lead's whole message as its quote. | Shorter quotes would be easier to scan. | Small |
 | **Free-tier AI.** It can be slow or busy, and Google may use free-tier content, so only invented data is allowed. | Fine for class; real leads would need a paid tier and a privacy review. | Out of scope for class |
 
 ## Plan for the final demonstration (in priority order)

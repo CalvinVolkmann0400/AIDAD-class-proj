@@ -48,7 +48,7 @@ Three steps, one line each, with a small screenshot per step:
 - Python, managed with **uv**
 - **Streamlit** for the screens · **Pydantic** for data shapes · **SQLite** for saving · **pytest** for tests
 - **Google Gemini** (free tier) for the AI
-- About 950 lines of Python in 11 small files, plus tests
+- About 970 lines of Python in 11 small files (comments and prompts included), plus 24 tests
 
 **Say:** "The screens never talk to the AI directly. They call the engine, the engine builds a
 prompt, and exactly one function in `llm.py` makes the call. That one function has the time

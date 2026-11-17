@@ -32,7 +32,8 @@ Type this as the lead and press Enter:
 
 > I lost two big clients this spring and my income has been up and down ever since.
 
-Wait for the reply (the spinner says "AI is thinking").
+Wait for the reply (the spinner says "AI is thinking"). In testing a reply usually took 5 to 10
+seconds, and once about 25 seconds. Keep talking while it thinks.
 
 **Say:** "I didn't script that question. The AI chose it from what I just said."
 
@@ -49,6 +50,8 @@ Click **Replay saved run** in the sidebar.
 
 **Say:** "To save time I'll load a full conversation the same AI produced earlier. The blue
 banner says it's a saved run." Scroll the chat once so they see it is a whole conversation.
+Point at the refund question: the offer file says nothing about refunds, so the AI answered
+"Jordan will cover refund policies directly with you on the call" instead of inventing a policy.
 
 ### Step 3 — the score (about 30 seconds)
 
@@ -79,7 +82,7 @@ and the AI's answer changes."
 
 | What you see | What to do | What to say |
 |---|---|---|
-| The spinner runs longer than about 10 seconds | Click **Replay saved run** straight away | "The free AI tier is busy, so here is a saved run from the same AI." |
+| The spinner runs longer than about 15 seconds | Click **Replay saved run** straight away | "The free AI tier is busy, so here is a saved run from the same AI." |
 | A red box: "The AI could not finish this step" | Click **Try again** once; if it fails again, click **Replay saved run** | "This is the failure handling: it tells me honestly instead of making something up." |
 | Orange **Practice mode** badge at the start | Skip Step 1's typing. Start at Step 2 (Replay) | "I'll show a saved run from the real AI." |
 | The app will not start at all | Use the screenshots in `docs/screenshots/` on the slides | "Here are screenshots from this morning's run." |
