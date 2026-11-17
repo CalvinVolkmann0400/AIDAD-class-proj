@@ -10,3 +10,6 @@ __pycache__/
 
 # Local database (created when the app runs)
 *.db
+
+# Local tool settings
+.claude/
